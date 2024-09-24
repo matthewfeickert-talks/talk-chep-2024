@@ -13,6 +13,13 @@ count: false
 October 21st, 2024
 
 ---
+# Self Notes
+
+* Time: 18 minute talk
+   - 15 minutes talk
+   - 3 minutes questions
+
+---
 # My motivations on this topic
 
 .kol-1-2[
@@ -23,13 +30,6 @@ October 21st, 2024
 .kol-1-2[
    X
 ]
-
----
-# Self Notes
-
-* Time: 18 minute talk
-   - 15 minutes talk
-   - 3 minutes questions
 
 ---
 # Summary
