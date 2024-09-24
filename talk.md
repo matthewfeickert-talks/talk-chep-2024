@@ -60,6 +60,11 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ]
 
 ---
+# Envisioning an ATLAS AGC
+
+Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/5326293/attachments/2621545/4532630/2023-03-30%20-%20Analysis%20Demonstrator.pdf) in Inkscape
+
+---
 # Summary
 
 .huge[
