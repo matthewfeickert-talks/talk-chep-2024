@@ -6,7 +6,8 @@ Viewable online [here](https://matthewfeickert-talks.github.io/talk-chep-2024/).
 
 ## Abstract
 
-The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools. This project is inspired by the analysis demonstrator from IRIS-HEP.
+The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
+This project is inspired by the analysis demonstrator from IRIS-HEP.
 The demonstrator employs PHYSLITE OpenData from the ATLAS collaboration, the new Run 3 compact ATLAS analysis data format.
 The tight integration of ROOT features within PHYSLITE presents unique challenges when integrating with the Python analysis ecosystem.
 The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the accessibility and reproducibility of the analysis.
