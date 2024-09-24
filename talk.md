@@ -25,6 +25,13 @@ October 21st, 2024
 ]
 
 ---
+# Self Notes
+
+* Time: 18 minute talk
+   - 15 minutes talk
+   - 3 minutes questions
+
+---
 # Summary
 
 .huge[
