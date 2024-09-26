@@ -60,9 +60,49 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ]
 
 ---
+# Slide describing columnar analysis
+
+Need to add one
+
+---
 # Envisioning an ATLAS AGC
 
 Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/5326293/attachments/2621545/4532630/2023-03-30%20-%20Analysis%20Demonstrator.pdf) in Inkscape
+
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/about/team">
+      <img src="figures/atlas-pipeline.png"; width=80%>
+   </a>
+.center.large[Components of an ATLAS AGC demonstrator Pipeline]
+</p>
+
+---
+# Prototyping on US ATLAS Analysis Facilities
+
+.kol-1-3[
+.large[
+* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with Coffea-casa
+* Provides support for:
+   - JupyterLab as a common interface
+   - Highly efficient data delivery with XCache
+   - Conversion to columnar formats with ServiceX
+* Excellent integration exercise between analysis and operations
+]
+]
+.kol-2-3[
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/projects/coffea-casa.html">
+      <img src="figures/coffea-casa.png"; width=100%>
+   </a>
+</p>
+
+.caption[Platform for interactive analysis]
+]
+
+---
+# ATLAS Open Data
+
+Show slide that we have it and go over its use and benefits
 
 ---
 # Summary
