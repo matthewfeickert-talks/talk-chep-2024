@@ -118,6 +118,31 @@ Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/532629
 ]
 
 ---
+# Pythonic Analysis Ecosystem
+
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://coiled.io/blog/pydata-dask/">
+      <img src="figures/pydata-ecosystem-pycon-2017.png"; width=100%>
+   </a>
+</p>
+
+.caption[Broader "Scientific Python" ecosystem]
+]
+
+Complexity bit goes between two
+
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1140031/">
+      <img src="figures/pyhep-ecosystem.svg"; width=100%>
+   </a>
+</p>
+
+.caption[In [2022](https://indico.cern.ch/event/1140031/) we created a view for the PyHEP ecosystem]
+]
+
+---
 # Summary
 
 .huge[
