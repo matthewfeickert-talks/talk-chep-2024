@@ -102,7 +102,20 @@ Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/532629
 ---
 # ATLAS Open Data
 
-Show slide that we have it and go over its use and benefits
+.kol-1-2[
+.large[
+* Show slide that we have it and go over its use and benefits
+]
+]
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/atlas-open-data-announcement.png"; width=100%>
+   </a>
+</p>
+
+.caption[13 TeV open data release from ATLAS]
+]
 
 ---
 # Summary
