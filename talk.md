@@ -108,9 +108,10 @@ Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/532629
 ]
 ]
 .kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
    <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/atlas-open-data-announcement.png"; width=100%>
+      <img src="figures/atlas-open-data-announcement.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
 
@@ -123,7 +124,7 @@ Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/532629
 .kol-1-2[
 <p style="text-align:center;">
    <a href="https://coiled.io/blog/pydata-dask/">
-      <img src="figures/pydata-ecosystem-pycon-2017.png"; width=100%>
+      <img src="figures/pydata-ecosystem-pycon-2017.png" style="width:100%">
    </a>
 </p>
 
@@ -135,7 +136,7 @@ Complexity bit goes between two
 .kol-1-2[
 <p style="text-align:center;">
    <a href="https://indico.cern.ch/event/1140031/">
-      <img src="figures/pyhep-ecosystem.svg"; width=100%>
+      <img src="figures/pyhep-ecosystem.svg" style="width:100%">
    </a>
 </p>
 
