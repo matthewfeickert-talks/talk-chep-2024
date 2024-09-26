@@ -144,6 +144,30 @@ Complexity bit goes between two
 ]
 
 ---
+# Pythonic Ecosystem for ATLAS Analysis
+
+.kol-1-3[
+.large[
+Providing the elements of an analysis pipeline
+<br>
+* Data query and access
+* Reading data files (ROOT and others) and columnar access
+* Data transformation and histogramming
+* Distributed analysis frameworks
+* Statistical inference
+* Analysis reinterpretation
+]
+]
+.kol-2-3[
+<br>
+<p style="text-align:center;">
+   <a href="https://scikit-hep.org/">
+      <img src="figures/pyhep-tool-view.png" style="width:100%">
+   </a>
+</p>
+]
+
+---
 # Summary
 
 .huge[
