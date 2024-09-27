@@ -77,7 +77,6 @@ The infrastructure and methodology for these applications will be discussed in d
 ]
 ]
 .kol-1-2[
-<br>
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
    <a href="https://indico.cern.ch/event/1340782/contributions/5711534/">
@@ -85,7 +84,8 @@ The infrastructure and methodology for these applications will be discussed in d
    </a>
 </p>
 
-.caption[(Image credit to [Nick Smith](https://indico.cern.ch/event/759388/contributions/3306852/), [Matthias Vigl](https://indico.cern.ch/event/1340782/contributions/5711534/))]
+.center.large[Different expressions/representations for same analysis result goals]
+.caption[([Nick Smith](https://indico.cern.ch/event/759388/contributions/3306852/), [Matthias Vigl](https://indico.cern.ch/event/1340782/contributions/5711534/))]
 ]
 
 ---
