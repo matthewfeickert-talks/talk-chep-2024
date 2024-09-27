@@ -158,13 +158,9 @@ Providing the elements of an analysis pipeline
 ---
 # Envisioning an ATLAS AGC
 
-Make [slide 3 of this](https://indico.cern.ch/event/1268248/contributions/5326293/attachments/2621545/4532630/2023-03-30%20-%20Analysis%20Demonstrator.pdf) in Inkscape
-
 <p style="text-align:center;">
-   <a href="https://iris-hep.org/about/team">
-      <img src="figures/atlas-pipeline.png"; width=80%>
-   </a>
-.center.large[Components of an ATLAS AGC demonstrator Pipeline]
+   <img src="figures/atlas-pipeline.png"; width=80%>
+.center.large[Components of an ATLAS AGC demonstrator pipeline]
 </p>
 
 ---
