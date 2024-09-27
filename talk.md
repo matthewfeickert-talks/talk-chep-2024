@@ -19,21 +19,16 @@ October 21st, 2024
    - 15 minutes talk
    - 3 minutes questions
 
----
-# Opportunities and Challenges of the HL-LHC
-<!--  -->
-<p style="text-align:center;">
-   <a href="https://hilumilhc.web.cern.ch/content/hl-lhc-project">
-      <img src="figures/HL-LHC_schedule.png"; width=69%>
-   </a>
-   <img src="figures/lhc_lumi.png"; width=30%>
-</p>
-<!--  -->
-.large[
-* Increase in "luminosity" of roughly order of magnitude [FIX THIS SLIDE UP]
-   - Factor of .bold[20-25] times the amount of collisions delivered from Run-2 of the LHC
-* Boon for measurements constrained by statistical uncertainties, searches for rare processes
-]
+The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
+This project is inspired by the analysis demonstrator from IRIS-HEP.
+The demonstrator employs PHYSLITE OpenData from the ATLAS collaboration, the new Run 3 compact ATLAS analysis data format.
+The tight integration of ROOT features within PHYSLITE presents unique challenges when integrating with the Python analysis ecosystem.
+The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the accessibility and reproducibility of the analysis.
+The analysis pipeline of the demonstrator incorporates a comprehensive suite of tools and libraries.
+These include uproot for data reading, awkward-array for data manipulation, Dask for parallel computing, and hist for histogram processing.
+For the purpose of statistical analysis, the pipeline integrates cabinetry and pyhf, providing a robust toolkit for analysis.
+A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
+The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
 
 ---
 # An Analysis Grand Challenge
@@ -60,9 +55,33 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ]
 
 ---
-# Slide describing columnar analysis
+# Columnar Analysis
 
-Need to add one
+.center[
+"columnar analysis" == "array programming for data analysis"
+]
+
+.kol-1-2[
+.large[
+* Higher level APIs for new users and improved user experience
+   - People using columnar analysis on ntuples already seem to be loving it
+   - Enable the same UX but without ntupling (save disk)
+* Potential for higher performance
+   - Enable on-the-fly CP tool corrections on PHYSLITE
+* Broader scientific data analysis ecosystem integration
+   - Extend and scale ATLAS tools with large and performant ecosystem
+]
+]
+.kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1340782/contributions/5711534/">
+      <img src="figures/columnar_analysis_hep_view.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+
+.caption[(Image credit to [Nick Smith](https://indico.cern.ch/event/759388/contributions/3306852/), [Matthias Vigl](https://indico.cern.ch/event/1340782/contributions/5711534/))]
+]
 
 ---
 # ATLAS Open Data
@@ -183,6 +202,22 @@ Providing the elements of an analysis pipeline
 class: end-slide, center
 
 Backup
+
+---
+# Opportunities and Challenges of the HL-LHC
+<!--  -->
+<p style="text-align:center;">
+   <a href="https://hilumilhc.web.cern.ch/content/hl-lhc-project">
+      <img src="figures/HL-LHC_schedule.png"; width=69%>
+   </a>
+   <img src="figures/lhc_lumi.png"; width=30%>
+</p>
+<!--  -->
+.large[
+* Increase in "luminosity" of roughly order of magnitude [FIX THIS SLIDE UP]
+   - Factor of .bold[20-25] times the amount of collisions delivered from Run-2 of the LHC
+* Boon for measurements constrained by statistical uncertainties, searches for rare processes
+]
 
 ---
 # Thing
