@@ -237,7 +237,7 @@ Providing the elements of an analysis pipeline
 * Raw PHYSLITE is not easily loadable by columnar analysis tools outside of ROOT
 * Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow efficiently reinterpreting data on the fly
    - e.g. correctly handling `ElementLinks`
-* ATLAS AMG members have contributed [`coffea.nanoevents.PHYSLITESchema`](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema) to support PHYSLITE in Coffea
+* ATLAS AMG members have contributed to open ecosystem development to support PHYSLITE in both Uproot and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
 * Continuing to support fixes to both the PyHEP ecosystem tools as well as reporting issues to PHYSLITE
    - Includes work by [ATLAS IRIS-HEP Fellow Sam Kelson](https://indico.cern.ch/event/1449314/contributions/6101290/)
 ]
