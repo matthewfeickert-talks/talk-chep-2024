@@ -114,7 +114,9 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ---
 # Pythonic Analysis Ecosystem
 
-.kol-1-2[
+<br>
+
+.kol-2-5[
 <p style="text-align:center;">
    <a href="https://coiled.io/blog/pydata-dask/">
       <img src="figures/pydata-ecosystem-pycon-2017.png" style="width:100%">
@@ -124,9 +126,13 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 .caption[Broader "Scientific Python" ecosystem]
 ]
 
-Complexity bit goes between two
+.kol-1-5[
+<p style="text-align:center;">
+   <img src="figures/pyhep-ecosystem-direction.png" style="width:50%">
+</p>
+]
 
-.kol-1-2[
+.kol-2-5[
 <p style="text-align:center;">
    <a href="https://indico.cern.ch/event/1140031/">
       <img src="figures/pyhep-ecosystem.svg" style="width:100%">
