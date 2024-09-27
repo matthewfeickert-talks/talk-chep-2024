@@ -14,12 +14,12 @@ on behalf of ATLAS Analysis Model Group<br>
 October 21st, 2024
 
 ---
-# Self Notes
+# Self Notes (slide will be removed for talk)
 
-* Time: 18 minute talk
+* .bold[Time]: 18 minute talk
    - .bold[15 minutes talk]
    - 3 minutes questions
-
+* .bold[Abstract]:
 The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
 This project is inspired by the analysis demonstrator from IRIS-HEP.
 The demonstrator employs PHYSLITE OpenData from the ATLAS collaboration, the new Run 3 compact ATLAS analysis data format.
@@ -234,13 +234,22 @@ Providing the elements of an analysis pipeline
 
 .kol-1-2[
 .large[
-* Raw PHYSLITE is not easily loadable by a columnar analysis outside of ROOT
-* Awkward Array supports behaviors, which allows efficiently reinterpreting data on the fly
+* Raw PHYSLITE is not easily loadable by columnar analysis tools outside of ROOT
+* Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow efficiently reinterpreting data on the fly
    - e.g. correctly handling `ElementLinks`
+* ATLAS AMG members have contributed [`coffea.nanoevents.PHYSLITESchema`](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema) to support PHYSLITE in Coffea
+* Continuing to support fixes to both the PyHEP ecosystem tools as well as reporting issues to PHYSLITE
+   - Includes work by [ATLAS IRIS-HEP Fellow Sam Kelson](https://indico.cern.ch/event/1449314/contributions/6101290/)
 ]
 ]
 .kol-1-2[
-   X
+<br>
+<br>
+<p style="text-align:center;">
+   <a href="https://github.com/CoffeaTeam/coffea/issues/1135">
+      <img src="figures/atlas-wishlist-coffea.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
 ]
 
 ---
