@@ -88,7 +88,10 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 
 .kol-1-2[
 .large[
-* Show slide that we have it and go over its use and benefits
+* Release of [ATLAS Run 2 2015 and 2016 open data](https://atlas.cern/Updates/News/Open-Data-Research) in July 2024
+* Benefits of using ATLAS open data
+   - Sharing the data freely with open access allows for use in testing community projects and problems
+   - Allows for students to be able to participate in analysis and make an impact while still inexperienced.
 ]
 ]
 .kol-1-2[
@@ -99,7 +102,13 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
    </a>
 </p>
 
-.caption[13 TeV open data release from ATLAS]
+<!-- .caption[13 TeV open data release from ATLAS] -->
+
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
 ]
 
 ---
