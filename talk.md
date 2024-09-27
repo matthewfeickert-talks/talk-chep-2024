@@ -113,18 +113,16 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ]
 
 ---
-# Pythonic Analysis Ecosystem
-
-<br>
+# Pythonic Analysis Ecosystem for HEP
 
 .kol-2-5[
 <p style="text-align:center;">
-   <a href="https://coiled.io/blog/pydata-dask/">
+   <a href="https://web.archive.org/web/20200925025947/https://coiled.io/blog/pydata-dask/">
       <img src="figures/pydata-ecosystem-pycon-2017.png" style="width:100%">
    </a>
 </p>
 
-.caption[Broader "Scientific Python" ecosystem]
+.center.huge[Broader "Scientific Python" ecosystem is designed to be interoperable and support [multiple domain levels](https://www.nature.com/articles/s41586-020-2649-2)]
 ]
 
 .kol-1-5[
@@ -140,7 +138,7 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
    </a>
 </p>
 
-.caption[In [2022](https://indico.cern.ch/event/1140031/) we created a view for the PyHEP ecosystem]
+.center.huge[Interoperable domain hierarchy design continued in ["PyHEP" ecosystem](https://indico.cern.ch/event/1140031/)]
 ]
 
 ---
