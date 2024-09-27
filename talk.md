@@ -3,6 +3,7 @@ count: false
 
 # Building a Columnar Analysis Demonstrator<br>for ATLAS PHYSLITE Open Data<br>using the Python Ecosystem
 .large.blue[Matthew Feickert]<br>
+on behalf of ATLAS Analysis Model Group<br>
 .large[(University of Wisconsin-Madison)]
 <br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
@@ -27,8 +28,8 @@ The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the acces
 The analysis pipeline of the demonstrator incorporates a comprehensive suite of tools and libraries.
 These include uproot for data reading, awkward-array for data manipulation, Dask for parallel computing, and hist for histogram processing.
 For the purpose of statistical analysis, the pipeline integrates cabinetry and pyhf, providing a robust toolkit for analysis.
-A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
-The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
+.bold[A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
+The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.]
 
 ---
 # Challenges for Future Analysis
@@ -226,6 +227,20 @@ Providing the elements of an analysis pipeline
       <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
+]
+
+---
+# Challenges: Reading all PHYSLITE files
+
+.kol-1-2[
+.large[
+* Raw PHYSLITE is not easily loadable by a columnar analysis outside of ROOT
+* Awkward Array supports behaviors, which allows efficiently reinterpreting data on the fly
+   - e.g. correctly handling `ElementLinks`
+]
+]
+.kol-1-2[
+   X
 ]
 
 ---
