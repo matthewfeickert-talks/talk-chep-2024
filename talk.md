@@ -34,29 +34,28 @@ The infrastructure and methodology for these applications will be discussed in d
 # Challenges for Future Analysis
 
 .kol-1-2[
-.large[
-* Moving forward won’t be able to store everything on disk
-* PHYSLITE
-   - Common file format for Run 4 Analysis Model
-   - Contains already-calibrated objects for fast analysis
-   - Monolithic: Intended to serve ~80% of physics analysis in Run 4
-   - Directly used without need for ntuples
-]
-]
-.kol-1-2[
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
    <a href="https://cds.cern.ch/record/2802918">
-      <img src="figures/atlas-disk-projection.png" style="width:75%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+      <img src="figures/atlas-disk-projection.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
 <!-- .caption[Projected evolution of disk under .blue[conservative] and .red[aggressive] R&D] -->
+.center.large[Moving forward won’t be able to store everything on disk]
+]
+.kol-1-2[
 <p style="text-align:center;">
    <a href="https://indico.jlab.org/event/459/contributions/11586/">
-      <img src="figures/physlite-model.png" style="width:75%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+      <img src="figures/physlite-model.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
 .caption[[Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023]
+
+.center.bold[PHYSLITE]
+* Common file format for Run 4 Analysis Model
+* Contains already-calibrated objects for fast analysis
+* Monolithic: Intended to serve ~80% of physics analysis in Run 4
+* Directly used without need for ntuples
 ]
 
 ---
