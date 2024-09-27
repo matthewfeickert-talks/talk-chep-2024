@@ -16,7 +16,7 @@ October 21st, 2024
 # Self Notes
 
 * Time: 18 minute talk
-   - 15 minutes talk
+   - .bold[15 minutes talk]
    - 3 minutes questions
 
 The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
@@ -31,27 +31,32 @@ A significant component of this project is the custom application of corrections
 The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
 
 ---
-# An Analysis Grand Challenge
+# Challenges for Future Analysis
 
+.kol-1-2[
 .large[
-HL-LHC era data scale requires rethinking how we engage with the data when we preform analysis
+* Moving forward won’t be able to store everything on disk
+* PHYSLITE
+   - Common file format for Run 4 Analysis Model
+   - Contains already-calibrated objects for fast analysis
+   - Monolithic: Intended to serve ~80% of physics analysis in Run 4
+   - Directly used without need for ntuples
 ]
-
-.kol-1-3[
-* .bold[Analysis Grand Challenge] (AGC) community exercise organized by [IRIS-HEP](https://iris-hep.org/) includes the stages of a projected typical HL-LHC analysis
-* Binned columnar analysis, reinterpretation [fix]
-* Development of the required cyberinfrastructure [fix]
-* Opportunity for ATLAS to demonstrate how a columnar analysis view and areas for improvement
-   - Accessing PHYSLITE, systematics
 ]
-.kol-2-3[
+.kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
-   <a href="https://iris-hep.org/grand-challenges.html#analysis-grand-challenge">
-      <img src="https://iris-hep.org/assets/images/cabinetry-vertical-slice.png"; width=100%>
+   <a href="https://cds.cern.ch/record/2802918">
+      <img src="figures/atlas-disk-projection.png" style="width:75%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-
-.caption[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
+<!-- .caption[Projected evolution of disk under .blue[conservative] and .red[aggressive] R&D] -->
+<p style="text-align:center;">
+   <a href="https://indico.jlab.org/event/459/contributions/11586/">
+      <img src="figures/physlite-model.png" style="width:75%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+.caption[[Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023]
 ]
 
 ---
@@ -84,31 +89,27 @@ HL-LHC era data scale requires rethinking how we engage with the data when we pr
 ]
 
 ---
-# ATLAS Open Data
+# An Analysis Grand Challenge
 
-.kol-1-2[
 .large[
-* Release of [ATLAS Run 2 2015 and 2016 open data](https://atlas.cern/Updates/News/Open-Data-Research) in July 2024
-* Benefits of using ATLAS open data
-   - Sharing the data freely with open access allows for use in testing community projects and problems
-   - Allows for students to be able to participate in analysis and make an impact while still inexperienced.
+HL-LHC era data scale requires rethinking how we engage with the data when we preform analysis
 ]
+
+.kol-1-3[
+* .bold[Analysis Grand Challenge] (AGC) community exercise organized by [IRIS-HEP](https://iris-hep.org/) includes the stages of a projected typical HL-LHC analysis
+* Binned columnar analysis, reinterpretation [fix]
+* Development of the required cyberinfrastructure [fix]
+* Opportunity for ATLAS to demonstrate how a columnar analysis view and areas for improvement
+   - Accessing PHYSLITE, systematics
 ]
-.kol-1-2[
-<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
+.kol-2-3[
 <p style="text-align:center;">
-   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/atlas-open-data-announcement.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   <a href="https://iris-hep.org/grand-challenges.html#analysis-grand-challenge">
+      <img src="https://iris-hep.org/assets/images/cabinetry-vertical-slice.png"; width=100%>
    </a>
 </p>
 
-<!-- .caption[13 TeV open data release from ATLAS] -->
-
-<p style="text-align:center;">
-   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
-   </a>
-</p>
+.caption[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
 ]
 
 ---
@@ -196,6 +197,38 @@ Providing the elements of an analysis pipeline
    <img src="figures/atlas-pipeline.png"; width=80%>
 .center.large[Components of an ATLAS AGC demonstrator pipeline]
 </p>
+
+---
+# ATLAS Open Data
+
+.kol-1-2[
+.large[
+* .bold[First] release of [ATLAS Run 2 2015 and 2016 open data](https://atlas.cern/Updates/News/Open-Data-Research) in July 2024
+* Using ATLAS open data for AGC
+   - Open access data allows for use in testing community projects and problems
+   - Released as PHYSLITE (HL-LHC data format)
+   - Allows for new students to be able to learn analysis and make contributions quickly
+* More on ATLAS Open Data at CHEP 2024:
+   - [The First Release of ATLAS Open Data for Research](https://indico.cern.ch/event/1338689/contributions/6013332/) (Zach Marshall, Monday plenary)
+   - [Open Data at ATLAS: Bringing TeV collisions to the World](https://indico.cern.ch/event/1338689/contributions/6011129/) (Giovanni Guerrieri, Monday Track 8)
+]
+]
+.kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/atlas-open-data-announcement.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+
+<!-- .caption[13 TeV open data release from ATLAS] -->
+
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+]
 
 ---
 # Summary
