@@ -253,6 +253,28 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
+# Challenges: Systematics
+
+.kol-1-2[
+.large[
+* As columnar analysis .bold[processes events in batches] also need combined performance (CP) tools and algorithms to process in batches
+* Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
+* Challenge: Columnar on-the-fly computation be faster than disk
+* Refactoring to columnar studies in ATLAS AMG show .bold[improvements in performance and flexibility]
+]
+]
+.kol-1-2[
+<br>
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1330797/contributions/5796636/">
+      <img src="figures/cp_tools_columnar.png" style="width:100%">
+   </a>
+</p>
+
+.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
 # Implementations
 
 .kol-1-2[
@@ -285,7 +307,7 @@ Providing the elements of an analysis pipeline
 
 .huge[
 * Development of a columnar ATLAS AGC implementation with full systematics is still ongoing
-* Columnar analysis tool efforts inside of ATLAS have been promising with combined performance algorithms showing performance increases
+* Columnar analysis tool efforts inside of ATLAS have been promising with CP tools showing performance increases
 * Technical advancements from AMG research are being incorporated into ATLAS wide tooling
 * Contributions upstream to PyHEP community tools
 * Advancements in tooling are enabling researchers
@@ -319,10 +341,3 @@ class: end-slide, center
    - Factor of .bold[20-25] times the amount of collisions delivered from Run-2 of the LHC
 * Boon for measurements constrained by statistical uncertainties, searches for rare processes
 ]
-
----
-
-class: end-slide, center
-count: false
-
-The end.

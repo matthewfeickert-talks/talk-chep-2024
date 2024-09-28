@@ -62,6 +62,18 @@ body {
     color: #9c2cfc;
 }
 
+.cptools {
+    color: #929292;
+}
+
+.datacolumn {
+    color: #0076ba;
+}
+
+.newcolumn {
+    color: #00ab8e;
+}
+
 .italic {
     font-style: italic;
 }
