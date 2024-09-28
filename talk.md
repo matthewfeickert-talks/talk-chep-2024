@@ -72,7 +72,7 @@ The infrastructure and methodology for these applications will be discussed in d
    - People using columnar analysis on ntuples already seem to be loving it
    - Enable the same UX but without ntupling (save disk)
 * Potential for higher performance
-   - Enable on-the-fly CP tool corrections on PHYSLITE
+   - Enable on-the-fly combined performance (CP) tool corrections on PHYSLITE
 * Broader scientific data analysis ecosystem integration
    - Extend and scale ATLAS tools with large and performant ecosystem
 ]
@@ -86,7 +86,7 @@ The infrastructure and methodology for these applications will be discussed in d
 </p>
 
 .center.large[Different expressions/representations for same analysis result goals]
-.caption[([Nick Smith](https://indico.cern.ch/event/759388/contributions/3306852/), [Matthias Vigl](https://indico.cern.ch/event/1340782/contributions/5711534/))]
+.caption[(Nick Smith, [2019 Joint HSF/OSG/WLCG Workshop](https://indico.cern.ch/event/759388/contributions/3306852/))]
 ]
 
 ---
@@ -257,7 +257,7 @@ Providing the elements of an analysis pipeline
 
 .kol-1-2[
 .large[
-* As columnar analysis .bold[processes events in batches] also need combined performance (CP) tools and algorithms to process in batches
+* As columnar analysis .bold[processes events in batches] also need CP tools and algorithms to process in batches
 * Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
 * Challenge: Columnar on-the-fly computation be faster than disk
 * Refactoring to columnar studies in ATLAS AMG show .bold[improvements in performance and flexibility]
@@ -285,7 +285,7 @@ Providing the elements of an analysis pipeline
 
 .kol-1-2[
 .large[
-* Refactoring to columnar CP tools allows for Pythonic array interfaces to be developed
+* Refactoring to columnar CP tools has allowed for Pythonic array interfaces to be developed
 * Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries allows
    - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from n-dimensional array libraries in Python that supports GPUs
    - Full design control of high-level user API (unified UX)
@@ -307,7 +307,36 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
-# Implementations
+# Columnar CP tools: $Z \to e^{+}e^{-}$ Demo
+
+.kol-1-2[
+.large[
+Using zero-copy Python bindings to Egamma CP tool prototype
+]
+
+```python
+from atlascp import EgammaTools
+```
+<!--  -->
+.large[
+1. Use [Uproot](https://uproot.readthedocs.io/) to load PHYSLITE Monte Carlo into [Awkward](https://awkward-array.org/) arrays
+2. Apply selections
+3. Initialize tools
+4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/)
+]
+]
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1330797/contributions/5796636/">
+      <img src="figures/Zee_mc_systematics.png" style="width:100%">
+   </a>
+</p>
+
+.caption[Selected $m_{ee}$ under on-the-fly computed systematic variations of electron reconstruction efficiency and corrections<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
+# ATLAS AGC Implementations
 
 .kol-1-2[
 .large[
