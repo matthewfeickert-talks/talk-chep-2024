@@ -190,7 +190,7 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
-# Envisioning an ATLAS AGC
+# Structure of an ATLAS AGC
 
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=80%>
@@ -253,11 +253,40 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
+# Implementations
+
+.kol-1-2[
+.large[
+* Tooling ecosystem is proving approachable and performant
+* Enabling university students to implement versions of the AGC by themselves with mentorship in a Jupyter notebook
+* ATLAS IRIS-HEP Fellow Denys Klekots's [AGC project using ATLAS open data](https://indico.cern.ch/event/1455396/contributions/6126406/) ([implementation on GitHub](https://github.com/iris-hep/agc-physlite))
+* Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2025+2016 Run 2 Monte Carlo from the 2024 ATLAS open data release
+]
+]
+.kol-1-2[
+.bold[Event selection]
+* 1 charged lepton
+* $\geq 4$ hadronic jets
+* Lepton kinematics: $p_{T} \geq 30~\mathrm{GeV}$, $\left|\eta\right| < 2.1$
+* Quark kinematics: $p_{T} \geq 25~\mathrm{GeV}$, $\left|\eta\right| < 2.4$
+
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1455396/contributions/6126406/">
+      <img src="figures/denys_agc_mbjj.png" style="width:49%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+   <a href="https://indico.cern.ch/event/1455396/contributions/6126456/">
+      <img src="figures/denys_agc_ht.png" style="width:49%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+]
+
+---
 # Summary
 
 .huge[
-* Whirlwind tour
-* Not a hopeless bog
+* Development of a columnar ATLAS AGC implementation with full systematics is still ongoing
+* Columnar analysis tool efforts inside of ATLAS have been promising with combined performance algorithms showing performance increases
+* Technical
 ]
 
 ---
