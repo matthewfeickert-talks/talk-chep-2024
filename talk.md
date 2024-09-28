@@ -173,9 +173,9 @@ Providing the elements of an analysis pipeline
 .large[
 * [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with Coffea-casa
 * Provides support for:
-   - JupyterLab as a common interface
-   - Highly efficient data delivery with XCache
-   - Conversion to columnar formats with ServiceX
+   - .bold[JupyterLab] as a common interface
+   - Highly efficient data delivery with .bold[XCache]
+   - Conversion to columnar formats with .bold[ServiceX]
 * Excellent integration exercise between analysis and operations
 ]
 ]
@@ -336,7 +336,7 @@ from atlascp import EgammaTools
 ]
 
 ---
-# ATLAS AGC Implementations
+# ATLAS Open Data AGC Implementations
 
 .kol-1-2[
 .large[
@@ -369,9 +369,10 @@ from atlascp import EgammaTools
 .huge[
 * Development of a columnar ATLAS AGC implementation with full systematics is still ongoing
 * Columnar analysis tool efforts inside of ATLAS have been promising with CP tools showing performance increases
+* ATLAS Open Data proving to be useful for research and community communication
 * Technical advancements from AMG research are being incorporated into ATLAS wide tooling
 * Contributions upstream to PyHEP community tools
-* Advancements in tooling are enabling researchers
+* Advancements in tooling are enabling researchers across career stages
 ]
 
 ---
@@ -386,19 +387,3 @@ class: end-slide, center
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
 * [ATLAS AGC Demonstrator](https://indico.cern.ch/event/1328739/contributions/5605607/), Gordon Watts, [ATLAS AMG+ADC Joint Session](https://indico.cern.ch/event/1328739/), 2023-03-30 [ATLAS Internal]
-
----
-# Opportunities and Challenges of the HL-LHC
-<!--  -->
-<p style="text-align:center;">
-   <a href="https://hilumilhc.web.cern.ch/content/hl-lhc-project">
-      <img src="figures/HL-LHC_schedule.png"; width=69%>
-   </a>
-   <img src="figures/lhc_lumi.png"; width=30%>
-</p>
-<!--  -->
-.large[
-* Increase in "luminosity" of roughly order of magnitude [FIX THIS SLIDE UP]
-   - Factor of .bold[20-25] times the amount of collisions delivered from Run-2 of the LHC
-* Boon for measurements constrained by statistical uncertainties, searches for rare processes
-]
