@@ -324,6 +324,8 @@ from atlascp import EgammaTools
 2. Apply selections
 3. Initialize tools
 4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/)
+
+Ongoing integration work into ATLAS Athena
 ]
 ]
 .kol-1-2[
