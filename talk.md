@@ -275,6 +275,38 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
+# Challenges and Opportunities: Systematics
+
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1330797/contributions/5796636/">
+      <img src="figures/columnar_cp_tools_diagram.png" style="width:70%">
+   </a>
+</p>
+
+.kol-1-2[
+.large[
+* Refactoring to columnar CP tools allows for Pythonic array interfaces to be developed
+* Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries allows
+   - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from n-dimensional array libraries in Python that supports GPUs
+   - Full design control of high-level user API (unified UX)
+]
+]
+.kol-1-2[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1330797/contributions/5796636/">
+      <img src="figures/cp_tools_columnar.png" style="width:85%">
+   </a>
+</p>
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1330797/contributions/5796636/">
+      <img src="figures/columnar_cp_python_api.png" style="width:100%">
+   </a>
+</p>
+
+.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
 # Implementations
 
 .kol-1-2[
