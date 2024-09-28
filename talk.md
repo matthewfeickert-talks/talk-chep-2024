@@ -28,8 +28,8 @@ The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the acces
 The analysis pipeline of the demonstrator incorporates a comprehensive suite of tools and libraries.
 These include uproot for data reading, awkward-array for data manipulation, Dask for parallel computing, and hist for histogram processing.
 For the purpose of statistical analysis, the pipeline integrates cabinetry and pyhf, providing a robust toolkit for analysis.
-.bold[A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
-The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.]
+A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
+The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
 
 ---
 # Challenges for Future Analysis
@@ -92,25 +92,26 @@ The infrastructure and methodology for these applications will be discussed in d
 ---
 # An Analysis Grand Challenge
 
-.large[
-HL-LHC era data scale requires rethinking how we engage with the data when we preform analysis
+.large.center[
+HL-LHC era data scale requires rethinking interacting with data during analysis
 ]
 
-.kol-1-3[
+.kol-2-5[
+.large[
 * .bold[Analysis Grand Challenge] (AGC) community exercise organized by [IRIS-HEP](https://iris-hep.org/) includes the stages of a projected typical HL-LHC analysis
-* Binned columnar analysis, reinterpretation [fix]
-* Development of the required cyberinfrastructure [fix]
-* Opportunity for ATLAS to demonstrate how a columnar analysis view and areas for improvement
-   - Accessing PHYSLITE, systematics
+* Demonstrator of development of the required cyberinfrastructure
+   - [The 200Gbps Challenge: Imagining HL-LHC analysis facilities](https://indico.cern.ch/event/1338689/contributions/6009824/) (Alexander Held, Monday plenary)
+* Opportunity for ATLAS to demonstrate columnar analysis views and areas for improvement
 ]
-.kol-2-3[
+]
+.kol-3-5[
 <p style="text-align:center;">
    <a href="https://iris-hep.org/grand-challenges.html#analysis-grand-challenge">
       <img src="https://iris-hep.org/assets/images/cabinetry-vertical-slice.png"; width=100%>
    </a>
 </p>
 
-.caption[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
+.center.large[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
 ]
 
 ---
