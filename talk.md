@@ -268,7 +268,7 @@ Providing the elements of an analysis pipeline
 * 1 charged lepton
 * $\geq 4$ hadronic jets
 * Lepton kinematics: $p_{T} \geq 30~\mathrm{GeV}$, $\left|\eta\right| < 2.1$
-* Quark kinematics: $p_{T} \geq 25~\mathrm{GeV}$, $\left|\eta\right| < 2.4$
+* Jet kinematics: $p_{T} \geq 25~\mathrm{GeV}$, $\left|\eta\right| < 2.4$
 
 <p style="text-align:center;">
    <a href="https://indico.cern.ch/event/1455396/contributions/6126406/">
@@ -281,13 +281,20 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
-# Summary
+# Summary of ATLAS Columnar AGC Efforts
 
 .huge[
 * Development of a columnar ATLAS AGC implementation with full systematics is still ongoing
 * Columnar analysis tool efforts inside of ATLAS have been promising with combined performance algorithms showing performance increases
-* Technical
+* Technical advancements from AMG research are being incorporated into ATLAS wide tooling
+* Contributions upstream to PyHEP community tools
+* Advancements in tooling are enabling researchers
 ]
+
+---
+class: end-slide, center
+
+.huge[Backup]
 
 ---
 # References
@@ -296,11 +303,6 @@ Providing the elements of an analysis pipeline
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
 * [ATLAS AGC Demonstrator](https://indico.cern.ch/event/1328739/contributions/5605607/), Gordon Watts, [ATLAS AMG+ADC Joint Session](https://indico.cern.ch/event/1328739/), 2023-03-30 [ATLAS Internal]
-
----
-class: end-slide, center
-
-Backup
 
 ---
 # Opportunities and Challenges of the HL-LHC
@@ -316,13 +318,6 @@ Backup
 * Increase in "luminosity" of roughly order of magnitude [FIX THIS SLIDE UP]
    - Factor of .bold[20-25] times the amount of collisions delivered from Run-2 of the LHC
 * Boon for measurements constrained by statistical uncertainties, searches for rare processes
-]
-
----
-# Thing
-
-.huge[
-X
 ]
 
 ---
