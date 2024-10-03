@@ -187,7 +187,7 @@ Providing the elements of an analysis pipeline
    </a>
 </p>
 
-.center.large[Platform for interactive (or noninteractive) analysis]
+.center.large[Scalable platform for interactive (or noninteractive) analysis]
 ]
 
 ---
