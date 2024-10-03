@@ -3,7 +3,7 @@ count: false
 
 # Building a Columnar Analysis Demonstrator<br>for ATLAS PHYSLITE Open Data<br>using the Python Ecosystem
 .large.blue[Matthew Feickert]<br>
-on behalf of ATLAS Analysis Model Group<br>
+on behalf of ATLAS Computing Activity<br>
 .large[(University of Wisconsin-Madison)]
 <br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
