@@ -50,7 +50,7 @@ The infrastructure and methodology for these applications will be discussed in d
       <img src="figures/physlite-model.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-.caption[([Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023)]
+.caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
 .center.bold[PHYSLITE]
 * Common file format for Run 4 Analysis Model
