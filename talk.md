@@ -41,8 +41,8 @@ The infrastructure and methodology for these applications will be discussed in d
       <img src="figures/atlas-disk-projection.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-<!-- .caption[Projected evolution of disk under .blue[conservative] and .red[aggressive] R&D] -->
-.center.large[Moving forward won’t be able to store everything on disk]
+.caption[([ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), 2022)]
+.center.large[Moving forward won't be able to store everything on disk]
 ]
 .kol-1-2[
 <p style="text-align:center;">
@@ -50,7 +50,7 @@ The infrastructure and methodology for these applications will be discussed in d
       <img src="figures/physlite-model.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-.caption[[Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023]
+.caption[([Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023)]
 
 .center.bold[PHYSLITE]
 * Common file format for Run 4 Analysis Model
