@@ -172,11 +172,11 @@ Providing the elements of an analysis pipeline
 
 .kol-1-3[
 .large[
-* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with Coffea-casa
+* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with [Coffea-casa](https://iris-hep.org/projects/coffea-casa.html)
 * Provides support for:
-   - .bold[JupyterLab] as a common interface
-   - Highly efficient data delivery with .bold[XCache]
-   - Conversion to columnar formats with .bold[ServiceX]
+   - [.bold[JupyterLab]](https://jupyterlab.readthedocs.io/) as a common interface
+   - Highly efficient data delivery with [.bold[XCache]](https://slateci.io/XCache/)
+   - Conversion to columnar formats with [.bold[ServiceX]](https://iris-hep.org/projects/servicex.html)
 * Excellent integration exercise between analysis and operations
 ]
 ]
@@ -187,7 +187,7 @@ Providing the elements of an analysis pipeline
    </a>
 </p>
 
-.caption[Platform for interactive analysis]
+.center.large[Platform for interactive (or noninteractive) analysis]
 ]
 
 ---
