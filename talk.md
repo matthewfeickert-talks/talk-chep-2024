@@ -324,7 +324,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 .kol-1-2[
 .large[
-Using zero-copy Python bindings to Egamma CP tool prototype
+Using zero-copy Python bindings to Egamma CP tool [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/58024df21af7d4465109fb668900567a3d0048c1/Zee_demo.ipynb)
 ]
 
 ```python
