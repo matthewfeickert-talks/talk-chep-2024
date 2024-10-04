@@ -193,10 +193,23 @@ Providing the elements of an analysis pipeline
 ---
 # Structure of an ATLAS AGC
 
+.kol-1-5[
+<br>
+<br>
+End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
+<br>
+<br>
+<br>
+<br>
+<br>
+.bold[Can still use PHYS] (same data format) through will need to perform .bold[additional steps] (calibration) with funcADL
+]
+.kol-4-5[
 <p style="text-align:center;">
-   <img src="figures/atlas-pipeline.png"; width=80%>
+   <img src="figures/atlas-pipeline.png"; width=100%>
 .center.large[Components of an ATLAS AGC demonstrator pipeline]
 </p>
+]
 
 ---
 # ATLAS Open Data
