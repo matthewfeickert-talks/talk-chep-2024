@@ -14,24 +14,6 @@ on behalf of ATLAS Computing Activity<br>
 October 21st, 2024
 
 ---
-# Self Notes (slide will be removed for talk)
-
-* .bold[Time]: 18 minute talk
-   - .bold[15 minutes talk]
-   - 3 minutes questions
-* .bold[Abstract]:
-The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
-This project is inspired by the analysis demonstrator from IRIS-HEP.
-The demonstrator employs PHYSLITE OpenData from the ATLAS collaboration, the new Run 3 compact ATLAS analysis data format.
-The tight integration of ROOT features within PHYSLITE presents unique challenges when integrating with the Python analysis ecosystem.
-The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the accessibility and reproducibility of the analysis.
-The analysis pipeline of the demonstrator incorporates a comprehensive suite of tools and libraries.
-These include uproot for data reading, awkward-array for data manipulation, Dask for parallel computing, and hist for histogram processing.
-For the purpose of statistical analysis, the pipeline integrates cabinetry and pyhf, providing a robust toolkit for analysis.
-A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
-The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
-
----
 # Challenges for Future Analysis
 
 .kol-1-2[
@@ -42,7 +24,10 @@ The infrastructure and methodology for these applications will be discussed in d
    </a>
 </p>
 .caption[([ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), 2022)]
-.center.large[Moving forward won't be able to store everything on disk]
+.large[
+* Won't be able to store everything on disk
+* Move towards "trade CPU for disk" model
+]
 ]
 .kol-1-2[
 <p style="text-align:center;">
@@ -53,10 +38,10 @@ The infrastructure and methodology for these applications will be discussed in d
 .caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
 .center.bold[PHYSLITE]
-* Common file format for Run 4 Analysis Model
+* Common file format for .bold[Run 4 Analysis Model]
 * Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
-* Directly used without need for ntuples
+* Can use directly without need for ntuples
 ]
 
 ---
@@ -68,7 +53,7 @@ The infrastructure and methodology for these applications will be discussed in d
 
 .kol-1-2[
 .large[
-* Higher level APIs for new users and improved user experience
+* Higher level APIs for physicists and improved user experience
    - People using columnar analysis on ntuples already seem to be loving it
    - Enable the same UX but without ntupling (save disk)
 * Potential for higher performance
@@ -390,6 +375,17 @@ Ongoing integration work into ATLAS Athena
 * Contributions upstream to PyHEP community tools
 * Advancements in tooling are enabling researchers across career stages
 ]
+
+---
+# Acknowledgements
+
+.huge[This work was supported in part by the United States National Science Foundation under Cooperative Agreements [OAC-1836650](https://nsf.gov/awardsearch/showAward?AWD_ID=1836650) and <br>[PHY-2323298](https://nsf.gov/awardsearch/showAward?AWD_ID=2323298) (Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP)).]
+
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/">
+      <img src="assets/logos/logo_IRIS-HEP.png" style="width:50%">
+   </a>
+</p>
 
 ---
 class: end-slide, center
