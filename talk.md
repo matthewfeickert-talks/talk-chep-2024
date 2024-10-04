@@ -171,6 +171,15 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 ]
 
 ---
+# Challenges: Tooling design decisions
+
+* This is a TBD placeholder slide
+* When CP tools were created the design decision is that they would be run in an analysis framework
+* Build it around the question "What would it take to get to `python -m pip install atlascp`?"
+   - Brings forward the idea of needing to support legacy CP tools that are battle tested and excellent and we don't want to lose
+   - Can also tie into bringing forward what the state of the v2 prototype is
+
+---
 # Columnar CP tools: $Z \to e^{+}e^{-}$ Demo
 
 .kol-1-2[
