@@ -3,7 +3,7 @@ count: false
 
 # Building a Columnar Analysis Demonstrator<br>for ATLAS PHYSLITE Open Data<br>using the Python Ecosystem
 .large.blue[Matthew Feickert]<br>
-on behalf of ATLAS Analysis Model Group<br>
+on behalf of ATLAS Computing Activity<br>
 .large[(University of Wisconsin-Madison)]
 <br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
@@ -41,8 +41,8 @@ The infrastructure and methodology for these applications will be discussed in d
       <img src="figures/atlas-disk-projection.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-<!-- .caption[Projected evolution of disk under .blue[conservative] and .red[aggressive] R&D] -->
-.center.large[Moving forward won’t be able to store everything on disk]
+.caption[([ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), 2022)]
+.center.large[Moving forward won't be able to store everything on disk]
 ]
 .kol-1-2[
 <p style="text-align:center;">
@@ -50,7 +50,7 @@ The infrastructure and methodology for these applications will be discussed in d
       <img src="figures/physlite-model.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-.caption[[Jana Schaarschmidt](https://indico.jlab.org/event/459/contributions/11586/), CHEP 2023]
+.caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
 .center.bold[PHYSLITE]
 * Common file format for Run 4 Analysis Model
@@ -172,11 +172,11 @@ Providing the elements of an analysis pipeline
 
 .kol-1-3[
 .large[
-* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with Coffea-casa
+* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with [Coffea-casa](https://iris-hep.org/projects/coffea-casa.html)
 * Provides support for:
-   - .bold[JupyterLab] as a common interface
-   - Highly efficient data delivery with .bold[XCache]
-   - Conversion to columnar formats with .bold[ServiceX]
+   - [.bold[JupyterLab]](https://jupyterlab.readthedocs.io/) as a common interface
+   - Highly efficient data delivery with [.bold[XCache]](https://slateci.io/XCache/)
+   - Conversion to columnar formats with [.bold[ServiceX]](https://iris-hep.org/projects/servicex.html)
 * Excellent integration exercise between analysis and operations
 ]
 ]
@@ -187,16 +187,29 @@ Providing the elements of an analysis pipeline
    </a>
 </p>
 
-.caption[Platform for interactive analysis]
+.center.large[Scalable platform for interactive (or noninteractive) analysis]
 ]
 
 ---
 # Structure of an ATLAS AGC
 
+.kol-1-5[
+<br>
+<br>
+End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
+<br>
+<br>
+<br>
+<br>
+<br>
+.bold[Can still use PHYS] (same data format) through will need to perform .bold[additional steps] (calibration) with funcADL
+]
+.kol-4-5[
 <p style="text-align:center;">
-   <img src="figures/atlas-pipeline.png"; width=80%>
+   <img src="figures/atlas-pipeline.png"; width=100%>
 .center.large[Components of an ATLAS AGC demonstrator pipeline]
 </p>
+]
 
 ---
 # ATLAS Open Data
@@ -217,12 +230,11 @@ Providing the elements of an analysis pipeline
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
    <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/atlas-open-data-announcement.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+      <img src="figures/atlas-open-data-announcement.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-
+.center[([ATLAS News, 2024-07-01](https://atlas.cern/Updates/News/Open-Data-Research))]
 <!-- .caption[13 TeV open data release from ATLAS] -->
-
 <p style="text-align:center;">
    <a href="https://atlas.cern/Updates/News/Open-Data-Research">
       <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
@@ -260,7 +272,7 @@ Providing the elements of an analysis pipeline
 .large[
 * As columnar analysis .bold[processes events in batches] also need CP tools and algorithms to process in batches
 * Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
-* Challenge: Columnar on-the-fly computation be faster than disk
+* Challenge: Can columnar on-the-fly computation be faster than disk?
 * Refactoring to columnar studies in ATLAS AMG show .bold[improvements in performance and flexibility]
 ]
 ]
@@ -312,7 +324,7 @@ Providing the elements of an analysis pipeline
 
 .kol-1-2[
 .large[
-Using zero-copy Python bindings to Egamma CP tool prototype
+Using zero-copy Python bindings to Egamma CP tool [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/58024df21af7d4465109fb668900567a3d0048c1/Zee_demo.ipynb)
 ]
 
 ```python
@@ -344,9 +356,9 @@ Ongoing integration work into ATLAS Athena
 .kol-1-2[
 .large[
 * Tooling ecosystem is proving approachable and performant
-* Enabling university students to implement versions of the AGC by themselves with mentorship in a Jupyter notebook
-* ATLAS IRIS-HEP Fellow Denys Klekots's [AGC project using ATLAS open data](https://indico.cern.ch/event/1455396/contributions/6126406/) ([implementation on GitHub](https://github.com/iris-hep/agc-physlite))
-* Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2025+2016 Run 2 Monte Carlo from the 2024 ATLAS open data release
+* Enabling mentored university students to implement versions of the AGC by themselves in a Jupyter notebook
+* ATLAS IRIS-HEP Fellow Denys Klekots's [AGC project using .bold[ATLAS open data]](https://indico.cern.ch/event/1455396/contributions/6126406/) ([implementation on GitHub](https://github.com/iris-hep/agc-physlite))
+* Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2025+2016 Run 2 Monte Carlo from the 2024 .bold[ATLAS open data] release
 ]
 ]
 .kol-1-2[
@@ -364,6 +376,7 @@ Ongoing integration work into ATLAS Athena
       <img src="figures/denys_agc_ht.png" style="width:49%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
+.center.large.bold[ATLAS open data]
 ]
 
 ---
@@ -386,6 +399,7 @@ class: end-slide, center
 ---
 # References
 
+* [ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), ATLAS Collaboration, 2022
 * [Using Legacy ATLAS C++ Calibration Tools in Modern Columnar Analysis Environments](https://indico.cern.ch/event/1330797/contributions/5796636/), Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/)
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
