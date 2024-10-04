@@ -273,7 +273,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .large[
 * As columnar analysis .bold[processes events in batches] also need CP tools and algorithms to process in batches
 * Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
-* Challenge: Columnar on-the-fly computation be faster than disk
+* Challenge: Can columnar on-the-fly computation be faster than disk?
 * Refactoring to columnar studies in ATLAS AMG show .bold[improvements in performance and flexibility]
 ]
 ]
