@@ -69,7 +69,7 @@ The infrastructure and methodology for these applications will be discussed in d
 
 .kol-1-2[
 .large[
-* Higher level APIs for new users and improved user experience
+* Higher level APIs for physicists and improved user experience
    - People using columnar analysis on ntuples already seem to be loving it
    - Enable the same UX but without ntupling (save disk)
 * Potential for higher performance
