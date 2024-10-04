@@ -57,7 +57,7 @@ The infrastructure and methodology for these applications will be discussed in d
 * Common file format for Run 4 Analysis Model
 * Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
-* Directly used without need for ntuples
+* Use directly without need for ntuples
 ]
 
 ---
