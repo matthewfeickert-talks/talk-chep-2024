@@ -45,90 +45,6 @@ October 21st, 2024
 ]
 
 ---
-# Columnar Analysis
-
-.center.large.bold[
-"columnar analysis" == "array programming for data analysis"
-]
-
-.kol-1-2[
-.large[
-* Higher level APIs for physicists and improved user experience
-   - People using columnar analysis on ntuples already seem to be loving it
-   - Enable the same UX but without ntupling (save disk)
-* Potential for higher performance
-   - Enable on-the-fly combined performance (CP) tool corrections on PHYSLITE
-* Broader scientific data analysis ecosystem integration
-   - Extend and scale ATLAS tools with large and performant ecosystem
-]
-]
-.kol-1-2[
-<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
-<p style="text-align:center;">
-   <a href="https://indico.cern.ch/event/1340782/contributions/5711534/">
-      <img src="figures/columnar_analysis_hep_view.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
-   </a>
-</p>
-
-.center.large[Different expressions/representations for same analysis result goals]
-.caption[(Nick Smith, [2019 Joint HSF/OSG/WLCG Workshop](https://indico.cern.ch/event/759388/contributions/3306852/))]
-]
-
----
-# An Analysis Grand Challenge
-
-.large.center[
-HL-LHC era data scale requires rethinking interacting with data during analysis
-]
-
-.kol-2-5[
-.large[
-* .bold[Analysis Grand Challenge] (AGC) community exercise organized by [IRIS-HEP](https://iris-hep.org/) includes the stages of a projected typical HL-LHC analysis
-* Demonstrator of development of the required cyberinfrastructure
-   - [The 200Gbps Challenge: Imagining HL-LHC analysis facilities](https://indico.cern.ch/event/1338689/contributions/6009824/) (Alexander Held, Monday plenary)
-* Opportunity for ATLAS to demonstrate columnar analysis views and areas for improvement
-]
-]
-.kol-3-5[
-<p style="text-align:center;">
-   <a href="https://iris-hep.org/grand-challenges.html#analysis-grand-challenge">
-      <img src="https://iris-hep.org/assets/images/cabinetry-vertical-slice.png"; width=100%>
-   </a>
-</p>
-
-.center.large[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
-]
-
----
-# Pythonic Analysis Ecosystem for HEP
-
-.kol-2-5[
-<p style="text-align:center;">
-   <a href="https://web.archive.org/web/20200925025947/https://coiled.io/blog/pydata-dask/">
-      <img src="figures/pydata-ecosystem-pycon-2017.png" style="width:100%">
-   </a>
-</p>
-
-.center.huge[Broader "Scientific Python" ecosystem is designed to be interoperable and support [multiple domain levels](https://www.nature.com/articles/s41586-020-2649-2)]
-]
-
-.kol-1-5[
-<p style="text-align:center;">
-   <img src="figures/pyhep-ecosystem-direction.png" style="width:50%">
-</p>
-]
-
-.kol-2-5[
-<p style="text-align:center;">
-   <a href="https://indico.cern.ch/event/1140031/">
-      <img src="figures/pyhep-ecosystem.svg" style="width:100%">
-   </a>
-</p>
-
-.center.huge[Interoperable domain hierarchy design continued in ["PyHEP" ecosystem](https://indico.cern.ch/event/1140031/)]
-]
-
----
 # Pythonic Ecosystem for ATLAS Analysis
 
 .kol-1-3[
@@ -153,29 +69,6 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
-# Prototyping on US ATLAS Analysis Facilities
-
-.kol-1-3[
-.large[
-* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with [Coffea-casa](https://iris-hep.org/projects/coffea-casa.html)
-* Provides support for:
-   - [.bold[JupyterLab]](https://jupyterlab.readthedocs.io/) as a common interface
-   - Highly efficient data delivery with [.bold[XCache]](https://slateci.io/XCache/)
-   - Conversion to columnar formats with [.bold[ServiceX]](https://iris-hep.org/projects/servicex.html)
-* Excellent integration exercise between analysis and operations
-]
-]
-.kol-2-3[
-<p style="text-align:center;">
-   <a href="https://iris-hep.org/projects/coffea-casa.html">
-      <img src="figures/coffea-casa.png"; width=100%>
-   </a>
-</p>
-
-.center.large[Scalable platform for interactive (or noninteractive) analysis]
-]
-
----
 # Structure of an ATLAS AGC
 
 .kol-1-5[
@@ -193,37 +86,6 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=100%>
 .center.large[Components of an ATLAS AGC demonstrator pipeline]
-</p>
-]
-
----
-# ATLAS Open Data
-
-.kol-1-2[
-.large[
-* .bold[First] release of [ATLAS Run 2 2015 and 2016 open data](https://atlas.cern/Updates/News/Open-Data-Research) in July 2024
-* Using ATLAS open data for AGC
-   - Open access data allows for use in testing community projects and problems
-   - Released as PHYSLITE (HL-LHC data format)
-   - Allows for new students to be able to learn analysis and make contributions quickly
-* More on ATLAS Open Data at CHEP 2024:
-   - [The First Release of ATLAS Open Data for Research](https://indico.cern.ch/event/1338689/contributions/6013332/) (Zach Marshall, Monday plenary)
-   - [Open Data at ATLAS: Bringing TeV collisions to the World](https://indico.cern.ch/event/1338689/contributions/6011129/) (Giovanni Guerrieri, Monday Track 8)
-]
-]
-.kol-1-2[
-<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
-<p style="text-align:center;">
-   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/atlas-open-data-announcement.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
-   </a>
-</p>
-.center[([ATLAS News, 2024-07-01](https://atlas.cern/Updates/News/Open-Data-Research))]
-<!-- .caption[13 TeV open data release from ATLAS] -->
-<p style="text-align:center;">
-   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
-   </a>
 </p>
 ]
 
@@ -248,6 +110,10 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
       <img src="figures/atlas-wishlist-coffea.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
+
+* More on ATLAS Open Data at CHEP 2024:
+   - [The First Release of ATLAS Open Data for Research](https://indico.cern.ch/event/1338689/contributions/6013332/) <br>(Zach Marshall, Monday plenary)
+   - [Open Data at ATLAS: Bringing TeV collisions to the World](https://indico.cern.ch/event/1338689/contributions/6011129/) (Giovanni Guerrieri, Monday Track 8)
 ]
 
 ---
@@ -391,6 +257,144 @@ Ongoing integration work into ATLAS Athena
 class: end-slide, center
 
 .huge[Backup]
+
+---
+# Columnar Analysis
+
+.center.large.bold[
+"columnar analysis" == "array programming for data analysis"
+]
+
+.kol-1-2[
+.large[
+* Higher level APIs for physicists and improved user experience
+   - People using columnar analysis on ntuples already seem to be loving it
+   - Enable the same UX but without ntupling (save disk)
+* Potential for higher performance
+   - Enable on-the-fly combined performance (CP) tool corrections on PHYSLITE
+* Broader scientific data analysis ecosystem integration
+   - Extend and scale ATLAS tools with large and performant ecosystem
+]
+]
+.kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1340782/contributions/5711534/">
+      <img src="figures/columnar_analysis_hep_view.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+
+.center.large[Different expressions/representations for same analysis result goals]
+.caption[(Nick Smith, [2019 Joint HSF/OSG/WLCG Workshop](https://indico.cern.ch/event/759388/contributions/3306852/))]
+]
+
+---
+# An Analysis Grand Challenge
+
+.large.center[
+HL-LHC era data scale requires rethinking interacting with data during analysis
+]
+
+.kol-2-5[
+.large[
+* .bold[Analysis Grand Challenge] (AGC) community exercise organized by [IRIS-HEP](https://iris-hep.org/) includes the stages of a projected typical HL-LHC analysis
+* Demonstrator of development of the required cyberinfrastructure
+   - [The 200Gbps Challenge: Imagining HL-LHC analysis facilities](https://indico.cern.ch/event/1338689/contributions/6009824/) (Alexander Held, Monday plenary)
+* Opportunity for ATLAS to demonstrate columnar analysis views and areas for improvement
+]
+]
+.kol-3-5[
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/grand-challenges.html#analysis-grand-challenge">
+      <img src="https://iris-hep.org/assets/images/cabinetry-vertical-slice.png"; width=100%>
+   </a>
+</p>
+
+.center.large[[High level view of operations in an HL-LHC analysis](https://iris-hep.org/grand-challenges.html#analysis-grand-challenge)]
+]
+
+---
+# Pythonic Analysis Ecosystem for HEP
+
+.kol-2-5[
+<p style="text-align:center;">
+   <a href="https://web.archive.org/web/20200925025947/https://coiled.io/blog/pydata-dask/">
+      <img src="figures/pydata-ecosystem-pycon-2017.png" style="width:100%">
+   </a>
+</p>
+
+.center.huge[Broader "Scientific Python" ecosystem is designed to be interoperable and support [multiple domain levels](https://www.nature.com/articles/s41586-020-2649-2)]
+]
+
+.kol-1-5[
+<p style="text-align:center;">
+   <img src="figures/pyhep-ecosystem-direction.png" style="width:50%">
+</p>
+]
+
+.kol-2-5[
+<p style="text-align:center;">
+   <a href="https://indico.cern.ch/event/1140031/">
+      <img src="figures/pyhep-ecosystem.svg" style="width:100%">
+   </a>
+</p>
+
+.center.huge[Interoperable domain hierarchy design continued in ["PyHEP" ecosystem](https://indico.cern.ch/event/1140031/)]
+]
+
+---
+# Prototyping on US ATLAS Analysis Facilities
+
+.kol-1-3[
+.large[
+* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with [Coffea-casa](https://iris-hep.org/projects/coffea-casa.html)
+* Provides support for:
+   - [.bold[JupyterLab]](https://jupyterlab.readthedocs.io/) as a common interface
+   - Highly efficient data delivery with [.bold[XCache]](https://slateci.io/XCache/)
+   - Conversion to columnar formats with [.bold[ServiceX]](https://iris-hep.org/projects/servicex.html)
+* Excellent integration exercise between analysis and operations
+]
+]
+.kol-2-3[
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/projects/coffea-casa.html">
+      <img src="figures/coffea-casa.png"; width=100%>
+   </a>
+</p>
+
+.center.large[Scalable platform for interactive (or noninteractive) analysis]
+]
+
+---
+# ATLAS Open Data
+
+.kol-1-2[
+.large[
+* .bold[First] release of [ATLAS Run 2 2015 and 2016 open data](https://atlas.cern/Updates/News/Open-Data-Research) in July 2024
+* Using ATLAS open data for AGC
+   - Open access data allows for use in testing community projects and problems
+   - Released as PHYSLITE (HL-LHC data format)
+   - Allows for new students to be able to learn analysis and make contributions quickly
+* More on ATLAS Open Data at CHEP 2024:
+   - [The First Release of ATLAS Open Data for Research](https://indico.cern.ch/event/1338689/contributions/6013332/) (Zach Marshall, Monday plenary)
+   - [Open Data at ATLAS: Bringing TeV collisions to the World](https://indico.cern.ch/event/1338689/contributions/6011129/) (Giovanni Guerrieri, Monday Track 8)
+]
+]
+.kol-1-2[
+<!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/atlas-open-data-announcement.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+.center[([ATLAS News, 2024-07-01](https://atlas.cern/Updates/News/Open-Data-Research))]
+<!-- .caption[13 TeV open data release from ATLAS] -->
+<p style="text-align:center;">
+   <a href="https://atlas.cern/Updates/News/Open-Data-Research">
+      <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+]
 
 ---
 # References
