@@ -395,6 +395,17 @@ Ongoing integration work into ATLAS Athena
 ]
 
 ---
+# Acknowledgements
+
+.huge[This work was supported in part by the United States National Science Foundation under Cooperative Agreements [OAC-1836650](https://nsf.gov/awardsearch/showAward?AWD_ID=1836650) and <br>[PHY-2323298](https://nsf.gov/awardsearch/showAward?AWD_ID=2323298) (Institute for Research and Innovation in Software for High Energy Physics (IRIS-HEP)).]
+
+<p style="text-align:center;">
+   <a href="https://iris-hep.org/">
+      <img src="assets/logos/logo_IRIS-HEP.png" style="width:50%">
+   </a>
+</p>
+
+---
 class: end-slide, center
 
 .huge[Backup]
