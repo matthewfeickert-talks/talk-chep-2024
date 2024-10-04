@@ -356,7 +356,7 @@ Ongoing integration work into ATLAS Athena
 .kol-1-2[
 .large[
 * Tooling ecosystem is proving approachable and performant
-* Enabling university students to implement versions of the AGC by themselves with mentorship in a Jupyter notebook
+* Enabling mentored university students to implement versions of the AGC by themselves in a Jupyter notebook
 * ATLAS IRIS-HEP Fellow Denys Klekots's [AGC project using .bold[ATLAS open data]](https://indico.cern.ch/event/1455396/contributions/6126406/) ([implementation on GitHub](https://github.com/iris-hep/agc-physlite))
 * Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2025+2016 Run 2 Monte Carlo from the 2024 .bold[ATLAS open data] release
 ]
