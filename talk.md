@@ -230,12 +230,11 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
    <a href="https://atlas.cern/Updates/News/Open-Data-Research">
-      <img src="figures/atlas-open-data-announcement.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+      <img src="figures/atlas-open-data-announcement.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
    </a>
 </p>
-
+.center[([ATLAS News, 2024-07-01](https://atlas.cern/Updates/News/Open-Data-Research))]
 <!-- .caption[13 TeV open data release from ATLAS] -->
-
 <p style="text-align:center;">
    <a href="https://atlas.cern/Updates/News/Open-Data-Research">
       <img src="figures/open-access-principles.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
