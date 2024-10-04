@@ -56,10 +56,10 @@ The infrastructure and methodology for these applications will be discussed in d
 .caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
 .center.bold[PHYSLITE]
-* Common file format for Run 4 Analysis Model
+* Common file format for .bold[Run 4 Analysis Model]
 * Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
-* Use directly without need for ntuples
+* Can use directly without need for ntuples
 ]
 
 ---
