@@ -42,7 +42,8 @@ The infrastructure and methodology for these applications will be discussed in d
    </a>
 </p>
 .caption[([ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), 2022)]
-.center.large[Moving forward won't be able to store everything on disk]
+* Moving forward won't be able to store everything on disk
+* Move towards "trade CPU for disk" model
 ]
 .kol-1-2[
 <p style="text-align:center;">
