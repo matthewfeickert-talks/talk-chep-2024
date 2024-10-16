@@ -171,6 +171,21 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 ]
 
 ---
+# Preliminary performance tests
+
+.center.huge[
+
+| Tool                                | Columnar μs/event | | xAOD μs/event | | Ratio | |
+| --------                            | -------:           | | ---:           | | ---:   | |
+| EgammaCalibrationAndSmearingTool    | 2.1               | | 7.1             | | 3.4     | |
+| AsgElectronEfficiencyCorrectionTool | 0.61              | | 2.6             | | 4.3     | |
+| MuonCalibTool                       | 16.8              | | 30.9             | | 1.8     | |
+| MuonEfficiencyScaleFactors          | 0.42              | | 2.6             | | 6.2     | |
+| JetUncertaintiesTool                | 3.4               | | 14.9             | | 4.4     | |
+
+]
+
+---
 # Challenges: Tooling design decisions
 
 * This is a TBD placeholder slide
