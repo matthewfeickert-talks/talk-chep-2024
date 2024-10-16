@@ -356,7 +356,7 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 
 .kol-1-3[
 .large[
-* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] with [Coffea-casa](https://iris-hep.org/projects/coffea-casa.html)
+* [University of Chicago Analysis Facility](https://af.uchicago.edu/) .bold[provides testing bed] for analysis platform
 * Provides support for:
    - [.bold[JupyterLab]](https://jupyterlab.readthedocs.io/) as a common interface
    - Highly efficient data delivery with [.bold[XCache]](https://slateci.io/XCache/)
