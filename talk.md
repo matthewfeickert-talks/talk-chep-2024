@@ -2,8 +2,8 @@ class: middle, center, title-slide
 count: false
 
 # Building a Columnar Analysis Demonstrator<br>for ATLAS PHYSLITE Open Data<br>using the Python Ecosystem
-.large.blue[Matthew Feickert]<br>
-on behalf of ATLAS Computing Activity<br>
+KyungEon Choi, .blue[Matthew Feickert], Nikolai Hartmann, Lukas Heinrich, Alexander Held, Evangelos Kourlitis,<br>
+Nils Krumnack, Giordon Stark, Matthias Vigl, Gordon Watts on behalf of the .bold[ATLAS Computing Activity]<br>
 .large[(University of Wisconsin-Madison)]
 <br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
