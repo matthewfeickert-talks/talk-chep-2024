@@ -184,7 +184,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 .kol-1-2[
 .large[
-Using zero-copy Python bindings to Egamma CP tool [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/58024df21af7d4465109fb668900567a3d0048c1/Zee_demo.ipynb)
+Using zero-copy Python bindings to Egamma CP tool [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/58024df21af7d4465109fb668900567a3d0048c1/Zee_demo.ipynb) (v1)
 ]
 
 ```python
@@ -197,7 +197,7 @@ from atlascp import EgammaTools
 3. Initialize tools
 4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/)
 
-Ongoing integration work into ATLAS Athena
+Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.ch/atlas-asg/columnar-athena))
 ]
 ]
 .kol-1-2[
