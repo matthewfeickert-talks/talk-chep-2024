@@ -139,30 +139,6 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 ]
 
 ---
-# Columnar CP tool backend performance tests
-
-.large[
-* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD model
-* While direct comparison not possible, tests are as close as possible
-   - Only involves `C++` CP tool code (no Python involved)
-   - Uses same version of CP tool
-   - xAOD includes event store access
-* Show .bold[substantial speedups] for migrated tools
-]
-
-.center.huge[
-
-| CP Tool                             | Columnar μs/event | | xAOD μs/event | | xAOD/Columnar | |
-| --------                            | -------:          | | ---:          | | ---:          | |
-| EgammaCalibrationAndSmearingTool    | 2.1               | | 7.1           | | .bold[3.4]    | |
-| AsgElectronEfficiencyCorrectionTool | 0.61              | | 2.6           | | .bold[4.3]    | |
-| MuonCalibTool                       | 16.8              | | 30.9          | | .bold[1.8]    | |
-| MuonEfficiencyScaleFactors          | 0.42              | | 2.6           | | .bold[6.2]    | |
-| JetUncertaintiesTool                | 3.4               | | 14.9          | | .bold[4.4]    | |
-
-]
-
----
 # Challenges and Opportunities: Systematics
 
 <p style="text-align:center;">
@@ -174,7 +150,10 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-1-2[
 .large[
 * Refactoring to columnar CP tools has allowed for .bold[more Pythonic] array interfaces to be developed
-* Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries ([`nanobind`](https://nanobind.readthedocs.io/)) allows
+* Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries
+   <a href="https://nanobind.readthedocs.io/">
+      <img src="figures/logos/nanobind.jpg" style="width:15%">
+   </a> allows
    - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from $n$-dimensional array libraries in Python that supports GPUs
    - Full design control of high-level user API (unified UX)
 ]
@@ -206,16 +185,11 @@ Demo of [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/57a
 1. Use [Uproot](https://uproot.readthedocs.io/) to load PHYSLITE Monte Carlo into [Awkward](https://awkward-array.org/) arrays
 2. Apply selections with Uproot and [Coffea](https://coffeateam.github.io/coffea/)
 3. Initialize tools
-.smaller[
 ```python
 from atlascp import EgammaTools
 ```
-]
 4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/) on UChicago ATLAS Analysis Facility
 
-.large[
-Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.ch/atlas-asg/columnar-athena))
-]
 ]
 .kol-1-2[
 <p style="text-align:center;">
@@ -225,6 +199,59 @@ Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.c
 </p>
 
 .caption[Selected $m_{ee}$ under on-the-fly computed systematic variations of electron reconstruction efficiency and corrections<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
+# Iteratively moving columnar tools forward
+
+.kol-2-3[
+.large[
+* [v1 prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/57ad135c84c4b874f057021f71afaf487cef6a13/Zee_demo.ipynb) established foundations of what was possible with new tooling
+   - Pythonic interfaces to CP tools could be written without heroic levels of work
+   - Prototype tools were performant enough to be evidence that further work warranted
+   - No "zero action" option &mdash; needed to create standalone prototype to determine if work was reasonable
+* [v2 prototype](https://gitlab.cern.ch/atlas-asg/columnar-athena) takes a step forward in scope
+   - Move developments into ATLAS Athena and .bold[migrate ATLAS CP tools to columnar backend]
+   - Add `nanobind` [to ATLAS Externals](https://gitlab.cern.ch/atlas/atlasexternals/-/merge_requests/1149) to be accessible in analysis releases for development
+   - Allows for full scale integration and performance tests
+]
+]
+.kol-1-3[
+<p style="text-align:center;">
+   <a href="https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/57ad135c84c4b874f057021f71afaf487cef6a13/Zee_demo.ipynb">
+      <img src="figures/notebook-view.png" style="width:90%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+<br>
+<p style="text-align:center;">
+   <a href="https://gitlab.cern.ch/atlas-asg/columnar-athena">
+      <img src="figures/columnar-athena.png" style="width:100%; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+   </a>
+</p>
+]
+
+---
+# Columnar CP tool backend performance tests
+
+.large[
+* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD model
+* While direct comparison not possible, tests are as close as possible
+   - Only involves `C++` CP tool code (no Python involved)
+   - Uses same version of CP tool
+   - xAOD includes event store access
+* Show .bold[substantial speedups] for migrated tools
+]
+
+.center.huge[
+
+| CP Tool                             | Columnar μs/event | | xAOD μs/event | | xAOD/Columnar | |
+| --------                            | -------:          | | ---:          | | ---:          | |
+| EgammaCalibrationAndSmearingTool    | 2.1               | | 7.1           | | .bold[3.4]    | |
+| AsgElectronEfficiencyCorrectionTool | 0.61              | | 2.6           | | .bold[4.3]    | |
+| MuonCalibTool                       | 16.8              | | 30.9          | | .bold[1.8]    | |
+| MuonEfficiencyScaleFactors          | 0.42              | | 2.6           | | .bold[6.2]    | |
+| JetUncertaintiesTool                | 3.4               | | 14.9          | | .bold[4.4]    | |
+
 ]
 
 ---
