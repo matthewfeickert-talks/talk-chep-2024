@@ -94,7 +94,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 .kol-1-2[
 .large[
-* Raw PHYSLITE is not easily loadable by columnar analysis tools outside of ROOT
+* Raw [PHYSLITE](https://atlas-physlite-content.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
    - Challenges for correctly handling `ElementLinks` and custom objects
 * Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow efficiently reinterpreting data on the fly
 * ATLAS AMG members have contributed to open ecosystem development to support PHYSLITE in both Uproot and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
