@@ -96,8 +96,8 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .large[
 * Raw [PHYSLITE](https://atlas-physlite-content.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
    - Challenges for correctly handling `ElementLinks` and custom objects
-* Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow efficiently reinterpreting data on the fly
-* ATLAS AMG members have contributed to open ecosystem development to support PHYSLITE in both Uproot and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
+* Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow for efficiently reinterpreting data on the fly
+* ATLAS members have contributed to open ecosystem development to support PHYSLITE in both Uproot and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
 * Continuing to support fixes to both the PyHEP ecosystem tools as well as reporting issues to PHYSLITE
    - Work by [ATLAS IRIS-HEP Fellow Sam Kelson](https://indico.cern.ch/event/1449314/contributions/6101290/)
 ]
@@ -211,8 +211,8 @@ from atlascp import EgammaTools
    - Prototype tools were performant enough to be evidence that further work warranted
    - No "zero action" option &mdash; needed to create standalone prototype to determine if work was reasonable
 * [v2 prototype](https://gitlab.cern.ch/atlas-asg/columnar-athena) takes a step forward in scope
-   - Move developments into ATLAS Athena and .bold[migrate ATLAS CP tools to columnar backend]
-   - Add `nanobind` [to ATLAS Externals](https://gitlab.cern.ch/atlas/atlasexternals/-/merge_requests/1149) to be accessible in analysis releases for development
+   - Moves developments into ATLAS Athena and .bold[migrate ATLAS CP tools to columnar backend] without breaking existing workflows
+   - Adds [infrastructure support](https://gitlab.cern.ch/atlas/atlasexternals/-/merge_requests/1149) for development of columnar analysis tools
    - Allows for full scale integration and performance tests
 ]
 ]
@@ -258,7 +258,7 @@ from atlascp import EgammaTools
 # Challenges: Tooling design decisions
 
 .large[
-* ATLAS CP tools were created 15+ years ago under design decision .bold[tools would be run in an analysis framework]
+* ATLAS CP tools were created 15+ years ago to .bold[run in an analysis framework]
    - Battle tested, extremely well understood, excellent performance, strong desire to be be maintained
    - Rewrite cost is currently too high across collaboration to move to [`correctionlib`](https://cms-nanoaod.github.io/correctionlib/) paradigm
    - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
@@ -305,9 +305,9 @@ from atlascp import EgammaTools
 # Summary of ATLAS Columnar AGC Efforts
 
 .huge[
-* Development of a columnar ATLAS AGC demonstrator with full systematics is still ongoing
 * Columnar analysis tool efforts inside of ATLAS have been promising with CP tools showing performance increases and bespoke UI
-* Technical advancements from AMG research are being incorporated into ATLAS wide tooling
+* Development of a columnar ATLAS AGC demonstrator with full systematics is ongoing supported by advancements in v2 prototype
+* Technical advancements are being incorporated into ATLAS wide tooling
 * Contributions upstream to PyHEP community tools
 * ATLAS Open Data proving to be useful for research and community communication
 * Advancements in tooling are enabling researchers across career stages
