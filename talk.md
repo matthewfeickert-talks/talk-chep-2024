@@ -41,7 +41,7 @@ October 21st, 2024
 * Common file format for .bold[Run 4 Analysis Model]
 * Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
-* Can use directly without need for ntuples
+* Will be able to use directly without need for ntuples
 ]
 
 ---
@@ -95,9 +95,9 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-1-2[
 .large[
 * Raw [PHYSLITE](https://atlas-physlite-content.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
-   - Challenges for correctly handling `ElementLinks` and custom objects
+   - Challenges for correctly handling `ElementLinks` and custom objects .smaller[(e.g. triggers)]
 * Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow for efficiently reinterpreting data on the fly
-* ATLAS members have contributed to open ecosystem development to support PHYSLITE in both Uproot and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
+* ATLAS members have contributed to open ecosystem development to support PHYSLITE in both [Uproot](https://uproot.readthedocs.io/en/stable/) and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
 * Continuing to support fixes to both the PyHEP ecosystem tools as well as reporting issues to PHYSLITE
    - Work by [ATLAS IRIS-HEP Fellow Sam Kelson](https://indico.cern.ch/event/1449314/contributions/6101290/)
 ]
@@ -135,7 +135,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
    </a>
 </p>
 
-.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in batches to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
 ]
 
 ---
@@ -208,10 +208,11 @@ from atlascp import EgammaTools
 .large[
 * [v1 prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/57ad135c84c4b874f057021f71afaf487cef6a13/Zee_demo.ipynb) established foundations of what was possible with new tooling
    - Pythonic interfaces to CP tools could be written without heroic levels of work
-   - Prototype tools were performant enough to be evidence that further work warranted
+   - Prototype tools were promising, but more work needed to achieve necessary performance
    - No "zero action" option &mdash; needed to create standalone prototype to determine if work was reasonable
 * [v2 prototype](https://gitlab.cern.ch/atlas-asg/columnar-athena) takes a step forward in scope
    - Moves developments into ATLAS Athena and .bold[migrate ATLAS CP tools to columnar backend] without breaking existing workflows
+      - Adds thread-safety
    - Adds [infrastructure support](https://gitlab.cern.ch/atlas/atlasexternals/-/merge_requests/1149) for development of columnar analysis tools
    - Allows for full scale integration and performance tests
 ]
