@@ -124,7 +124,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 * As columnar analysis .bold[processes events in batches] also need CP tools and algorithms to process in batches
 * Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
 * Challenge: Can columnar on-the-fly computation be faster than disk?
-* Refactoring to columnar studies in ATLAS AMG show .bold[improvements in performance and flexibility]
+* Refactoring tools to a columnar backend in ATLAS AMG show .bold[improvements in performance and flexibility]
 ]
 ]
 .kol-1-2[
@@ -136,6 +136,30 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 </p>
 
 .center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
+# Columnar CP tool backend performance tests
+
+.large[
+* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD
+* While direct comparison not possible, tests are as close as possible
+   - Only involves `C++` CP tool code (no Python involved)
+   - Uses same version of CP tool
+   - xAOD includes event store access
+* Show .bold[substantial speedups] for migrated tools
+]
+
+.center.huge[
+
+| CP Tool                             | Columnar μs/event | | xAOD μs/event | | xAOD/Columnar | |
+| --------                            | -------:          | | ---:          | | ---:          | |
+| EgammaCalibrationAndSmearingTool    | 2.1               | | 7.1           | | .bold[3.4]    | |
+| AsgElectronEfficiencyCorrectionTool | 0.61              | | 2.6           | | .bold[4.3]    | |
+| MuonCalibTool                       | 16.8              | | 30.9          | | .bold[1.8]    | |
+| MuonEfficiencyScaleFactors          | 0.42              | | 2.6           | | .bold[6.2]    | |
+| JetUncertaintiesTool                | 3.4               | | 14.9          | | .bold[4.4]    | |
+
 ]
 
 ---
@@ -151,7 +175,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .large[
 * Refactoring to columnar CP tools has allowed for Pythonic array interfaces to be developed
 * Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries allows
-   - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from n-dimensional array libraries in Python that supports GPUs
+   - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from $n$-dimensional array libraries in Python that supports GPUs
    - Full design control of high-level user API (unified UX)
 ]
 ]
@@ -168,21 +192,6 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 </p>
 
 .center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
-]
-
----
-# Preliminary performance tests
-
-.center.huge[
-
-| Tool                                | Columnar μs/event | | xAOD μs/event | | Ratio | |
-| --------                            | -------:           | | ---:           | | ---:   | |
-| EgammaCalibrationAndSmearingTool    | 2.1               | | 7.1             | | 3.4     | |
-| AsgElectronEfficiencyCorrectionTool | 0.61              | | 2.6             | | 4.3     | |
-| MuonCalibTool                       | 16.8              | | 30.9             | | 1.8     | |
-| MuonEfficiencyScaleFactors          | 0.42              | | 2.6             | | 6.2     | |
-| JetUncertaintiesTool                | 3.4               | | 14.9             | | 4.4     | |
-
 ]
 
 ---
@@ -429,3 +438,4 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
 * [ATLAS AGC Demonstrator](https://indico.cern.ch/event/1328739/contributions/5605607/), Gordon Watts, [ATLAS AMG+ADC Joint Session](https://indico.cern.ch/event/1328739/), 2023-03-30 [ATLAS Internal]
+* [Tour of the CP Columnar Prototype and CP Algorithm Conversion](https://indico.cern.ch/event/1463263/contributions/6161076/), Nils Krumnack, 2024-10-07 [ATLAS Internal]
