@@ -49,8 +49,8 @@ October 21st, 2024
 
 .kol-1-3[
 .large[
-Providing the elements of an analysis pipeline
-<br>
+Providing the elements of a .bold[columnar analysis pipeline]
+
 * Data query and access
 * Reading data files (ROOT and others) and columnar access
 * Data transformation and histogramming
@@ -69,7 +69,7 @@ Providing the elements of an analysis pipeline
 ]
 
 ---
-# Structure of an ATLAS AGC
+# Composing structure of an ATLAS AGC
 
 .kol-1-5[
 <br>
@@ -142,7 +142,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 # Columnar CP tool backend performance tests
 
 .large[
-* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD
+* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD model
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
@@ -173,8 +173,8 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 .kol-1-2[
 .large[
-* Refactoring to columnar CP tools has allowed for Pythonic array interfaces to be developed
-* Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries allows
+* Refactoring to columnar CP tools has allowed for .bold[more Pythonic] array interfaces to be developed
+* Using [next generation](https://nanobind.readthedocs.io/) of C++/Python binding libraries ([`nanobind`](https://nanobind.readthedocs.io/)) allows
    - [Zero-copy operations](https://nanobind.readthedocs.io/en/latest/ndarray.html) to/from $n$-dimensional array libraries in Python that supports GPUs
    - Full design control of high-level user API (unified UX)
 ]
@@ -195,32 +195,25 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 ]
 
 ---
-# Challenges: Tooling design decisions
-
-* This is a TBD placeholder slide
-* When CP tools were created the design decision is that they would be run in an analysis framework
-* Build it around the question "What would it take to get to `python -m pip install atlascp`?"
-   - Brings forward the idea of needing to support legacy CP tools that are battle tested and excellent and we don't want to lose
-   - Can also tie into bringing forward what the state of the v2 prototype is
-
----
 # Columnar CP tools: $Z \to e^{+}e^{-}$ Demo
 
 .kol-1-2[
 .large[
-Using zero-copy Python bindings to Egamma CP tool [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/58024df21af7d4465109fb668900567a3d0048c1/Zee_demo.ipynb) (v1)
+Demo of [prototype](https://gitlab.cern.ch/gstark/pycolumnarprototype/-/blob/57ad135c84c4b874f057021f71afaf487cef6a13/Zee_demo.ipynb) (v1) zero-copy Python bindings to columnar Egamma CP tool to compute systematics on the fly for $m_{ee}$.
 ]
 
+<!--  -->
+1. Use [Uproot](https://uproot.readthedocs.io/) to load PHYSLITE Monte Carlo into [Awkward](https://awkward-array.org/) arrays
+2. Apply selections with Uproot and [Coffea](https://coffeateam.github.io/coffea/)
+3. Initialize tools
+.smaller[
 ```python
 from atlascp import EgammaTools
 ```
-<!--  -->
-.large[
-1. Use [Uproot](https://uproot.readthedocs.io/) to load PHYSLITE Monte Carlo into [Awkward](https://awkward-array.org/) arrays
-2. Apply selections
-3. Initialize tools
-4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/)
+]
+4. Compute systematics on the fly efficiently scaled with [dask-awkward](https://dask-awkward.readthedocs.io/) on UChicago ATLAS Analysis Facility
 
+.large[
 Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.ch/atlas-asg/columnar-athena))
 ]
 ]
@@ -232,6 +225,24 @@ Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.c
 </p>
 
 .caption[Selected $m_{ee}$ under on-the-fly computed systematic variations of electron reconstruction efficiency and corrections<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+]
+
+---
+# Challenges: Tooling design decisions
+
+.large[
+* ATLAS CP tools were created 15+ years ago under design decision .bold[tools would be run in an analysis framework]
+   - Battle tested, extremely well understood, excellent performance, strong desire to be be maintained
+   - Rewrite cost is currently too high across collaboration to move to [`correctionlib`](https://cms-nanoaod.github.io/correctionlib/) paradigm
+   - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
+* Raises the question: "What would it take to get to .bold[`python -m pip install atlascp`]?"
+   - Idea is not as far fetched as you might think: [`pip install ROOT`](https://indico.cern.ch/event/1338689/contributions/6010410/) (Vincenzo Padulano, Monday Track 6)
+* Columnar prototype explores these possibilities
+   - .bold[Adopting columnar backend] makes columnar paradigm possible
+   - .bold[Ongoing `nanobind` integration] bridges `C++`/Python with performance
+   - .bold[Pythonic API design] for high level analysis thinking
+* Steps beyond: Modularization to level that allows packaging with [`scikit-build-core`](https://scikit-build-core.readthedocs.io/)
+   - Allows for "just another" tool in the PyHEP ecosystem
 ]
 
 ---
@@ -267,11 +278,11 @@ Ongoing integration work into ATLAS Athena ([prototype v2](https://gitlab.cern.c
 # Summary of ATLAS Columnar AGC Efforts
 
 .huge[
-* Development of a columnar ATLAS AGC implementation with full systematics is still ongoing
-* Columnar analysis tool efforts inside of ATLAS have been promising with CP tools showing performance increases
-* ATLAS Open Data proving to be useful for research and community communication
+* Development of a columnar ATLAS AGC demonstrator with full systematics is still ongoing
+* Columnar analysis tool efforts inside of ATLAS have been promising with CP tools showing performance increases and bespoke UI
 * Technical advancements from AMG research are being incorporated into ATLAS wide tooling
 * Contributions upstream to PyHEP community tools
+* ATLAS Open Data proving to be useful for research and community communication
 * Advancements in tooling are enabling researchers across career stages
 ]
 
