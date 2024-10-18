@@ -7,11 +7,12 @@ Nils Krumnack, Giordon Stark, Matthias Vigl, Gordon Watts on behalf of the .bold
 .large[(University of Wisconsin-Madison)]
 <br>
 [matthew.feickert@cern.ch](mailto:matthew.feickert@cern.ch)
-<br>
 
 [International Conference on Computing in High Energy and Nuclear Physics (CHEP) 2024](https://indico.cern.ch/event/1338689/contributions/6015915/)
-
+<br>
 October 21st, 2024
+
+.middle-logo[]
 
 ---
 # Challenges for Future Analysis
