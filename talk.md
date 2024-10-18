@@ -136,7 +136,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
    </a>
 </p>
 
-.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in batches to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+.center[Columnar .cptools[combined performance (CP) tools] operate on .datacolumn[existing columns] in batches to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
 ]
 
 ---
@@ -171,7 +171,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
    </a>
 </p>
 
-.center[Columnar .cptools[CP tools] operate on .datacolumn[existing columns] in chunks to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
+.center[Columnar .cptools[combined performance (CP) tools] operate on .datacolumn[existing columns] in batches to generate .newcolumn[new columns]<br>(Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/contributions/5796636/))]
 ]
 
 ---
