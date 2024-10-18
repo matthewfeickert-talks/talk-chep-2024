@@ -86,7 +86,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-4-5[
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=100%>
-.center.large[Components of an ATLAS AGC demonstrator pipeline]
+.center.large[Components of an ATLAS Analysis Grand Challenge (AGC)<br>demonstrator pipeline]
 </p>
 ]
 
@@ -242,7 +242,7 @@ from atlascp import EgammaTools
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
    - xAOD includes event store access
-* Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface
+* Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface (EDM access dependent)
    - Time for i/o and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
 ]
 
