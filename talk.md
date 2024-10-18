@@ -38,7 +38,7 @@ October 21st, 2024
 </p>
 .caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
-[.center.bold[PHYSLITE]](https://atlas-physlite-content.web.cern.ch/)
+[.center.bold[PHYSLITE]](https://atlas-physlite-content-opendata.web.cern.ch/)
 * Common file format for .bold[Run 4 Analysis Model]
 * Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
@@ -95,7 +95,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 .kol-1-2[
 .large[
-* Raw [PHYSLITE](https://atlas-physlite-content.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
+* Raw [PHYSLITE](https://atlas-physlite-content-opendata.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
    - Challenges for correctly handling `ElementLinks` and custom objects .smaller[(e.g. triggers)]
 * Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow for efficiently reinterpreting data on the fly
 * ATLAS members have contributed to open ecosystem development to support PHYSLITE in both [Uproot](https://uproot.readthedocs.io/en/stable/) and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
@@ -478,7 +478,8 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 # References
 
 * [ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), ATLAS Collaboration, 2022
-* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024
+* [Documentation on PHYSLITE Variables for ATLAS Open Data](https://atlas-physlite-content-opendata.web.cern.ch/), ATLAS Collaboration, Accessed 2024
+* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024 [ATLAS Internal]
 * [Using Legacy ATLAS C++ Calibration Tools in Modern Columnar Analysis Environments](https://indico.cern.ch/event/1330797/contributions/5796636/), Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/)
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
