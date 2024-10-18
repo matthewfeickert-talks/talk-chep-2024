@@ -479,9 +479,9 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 
 * [ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), ATLAS Collaboration, 2022
 * [Documentation on PHYSLITE Variables for ATLAS Open Data](https://atlas-physlite-content-opendata.web.cern.ch/), ATLAS Collaboration, Accessed 2024
-* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024 [ATLAS Internal]
 * [Using Legacy ATLAS C++ Calibration Tools in Modern Columnar Analysis Environments](https://indico.cern.ch/event/1330797/contributions/5796636/), Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/)
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
+* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024 [ATLAS Internal]
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
 * [ATLAS AGC Demonstrator](https://indico.cern.ch/event/1328739/contributions/5605607/), Gordon Watts, [ATLAS AMG+ADC Joint Session](https://indico.cern.ch/event/1328739/), 2023-03-30 [ATLAS Internal]
 * [Tour of the CP Columnar Prototype and CP Algorithm Conversion](https://indico.cern.ch/event/1463263/contributions/6161076/), Nils Krumnack, 2024-10-07 [ATLAS Internal]
