@@ -86,7 +86,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-4-5[
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=100%>
-.center.large[Components of an ATLAS Analysis Grand Challenge (AGC)<br>demonstrator pipeline]
+.center.large[Components of an ATLAS [Analysis Grand Challenge (AGC)](https://agc.readthedocs.io/)<br>demonstrator pipeline]
 </p>
 ]
 
