@@ -234,15 +234,17 @@ from atlascp import EgammaTools
 ---
 # Columnar CP tool backend performance tests
 
-.large[
-* During (ongoing) refactor added integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool] (not i/o) and compare to xAOD model
+.huge[
+* During (ongoing) refactor added preliminary integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool per event] (not i/o) and compare to xAOD model
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
    - xAOD includes event store access
-* Show .bold[substantial speedups] for migrated tools
+* Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface
+   - Time for i/o and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
 ]
 
+<!--
 .center.huge[
 
 | CP Tool                             | Columnar μs/event | | xAOD μs/event | | xAOD/Columnar | |
@@ -254,6 +256,7 @@ from atlascp import EgammaTools
 | JetUncertaintiesTool                | 3.4               | | 14.9          | | .bold[4.4]    | |
 
 ]
+ -->
 
 ---
 # Challenges: Tooling design decisions
