@@ -26,7 +26,7 @@ October 21st, 2024
 .caption[([ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), 2022)]
 .large[
 * Won't be able to store everything on disk
-* Move towards "trade CPU for disk" model
+* Move towards "trade disk for CPU" model
 ]
 ]
 .kol-1-2[
@@ -123,8 +123,9 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .large[
 * As columnar analysis .bold[processes events in batches] also need CP tools and algorithms to process in batches
 * Current CP tools operate on xAOD event data model (EDM) for calculation and write systematics to disk for future access (I/O heavy)
-* Challenge: Can columnar on-the-fly computation be faster than disk?
-* Refactoring tools to a columnar backend in ATLAS AMG show .bold[improvements in performance and flexibility]
+* Challenge: Can we adapt this model to work in on-the-fly computation columnar paradigm?
+   - Help with "trade disk for CPU" model
+* Refactoring tools to a columnar backend in ATLAS show .bold[improvements in performance and flexibility]
 ]
 ]
 .kol-1-2[
