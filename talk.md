@@ -263,12 +263,13 @@ from atlascp import EgammaTools
 # Challenges: Tooling design decisions
 
 .large[
-* ATLAS CP tools were created 15+ years ago to .bold[run in an analysis framework]
-   - Battle tested, extremely well understood, excellent performance, strong desire to be be maintained
+* ATLAS CP tools were created 10-15 years ago to .bold[run in an analysis framework]
+   - Battle tested, extremely well understood, excellent physics performance, strong desire to be be maintained
    - Rewrite cost is currently too high across collaboration to move to [`correctionlib`](https://cms-nanoaod.github.io/correctionlib/) paradigm
    - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
+   - Columnar .bold[cracks open "black box"] implementations of tools for the new analysis model
 * Raises the question: "What would it take to get to .bold[`python -m pip install atlascp`]?"
-   - Idea is not as far fetched as you might think: [`pip install ROOT`](https://indico.cern.ch/event/1338689/contributions/6010410/) (Vincenzo Padulano, Monday Track 6)
+   - Ambitious idea not as far fetched as you might think: [`pip install ROOT`](https://indico.cern.ch/event/1338689/contributions/6010410/) (Vincenzo Padulano, Monday Track 6)
 * Columnar prototype explores these possibilities
    - .bold[Adopting columnar backend] makes columnar paradigm possible
    - .bold[Ongoing `nanobind` integration] bridges `C++`/Python with performance
