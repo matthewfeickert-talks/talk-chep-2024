@@ -237,7 +237,7 @@ from atlascp import EgammaTools
 # Columnar CP tool backend performance tests
 
 .huge[
-* During (ongoing) refactor added preliminary integrated benchmark to [measure](https://docs.google.com/spreadsheets/d/1psLklZk6B7xcOz2Zijb0vB8AvIuObxHz6v-mLHfUqrw/edit?usp=sharing) .bold[time spent in tool per event] (not i/o) and compare to xAOD model
+* During (ongoing) refactor added preliminary integrated benchmark to measure .bold[time spent in tool per event] (not i/o) and compare to xAOD model
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
