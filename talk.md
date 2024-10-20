@@ -17,6 +17,17 @@ October 21st, 2024
 ---
 # Challenges for Future Analysis
 
+<!--
+As we move towards the high luminosity lhc (HL-LHC) era we know already that there will be serval computing challenges to overcome.
+One of those is the amount of required disk for the the data that will be collected, which as seen in the figure on the left from the ATLAS software and computing HL-LHC roadmap, where even with aggressive R&D program the amount of disk needed would be between +10%/+20% per year of the sustained budget model.
+As we know that we won't be able to realistically store everything on disk, ATLAS is moving towards a strategy of "trading disk for CPU" where we move to computing on the fly information traditionally stored on disk.
+
+Alongside the disk use reduction plan is the PHYSLITE file format selected as the Run 4 analysis model.
+PHYSLITE is a monolithic file format that is intended to serve most Run 4 physics analsyes use cases.
+It is intended for direct use in physics analysis, with already calibrated objects allowing for people to get right to analysis, and will be able to be used directly without having to create ntuples.
+Skimming may still be desirable in some cases, but the main idea is that as a format it is ready to go for analysis.
+ -->
+
 .kol-1-2[
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
@@ -40,13 +51,23 @@ October 21st, 2024
 
 [.center.bold[PHYSLITE]](https://atlas-physlite-content-opendata.web.cern.ch/)
 * Common file format for .bold[Run 4 Analysis Model]
-* Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
+* Contains already-calibrated objects for fast analysis
 * Will be able to use directly without need for ntuples
 ]
 
 ---
 # Pythonic Ecosystem for ATLAS Analysis
+
+<!--
+An interest that ATLAS has is to be able to integrate in and take advantage of the modern set of data science tools that exist in the Scikit-HEP/PyHEP ecosystem that builds upon and extends the broader Scientific Python ecosystem.
+This involves tools like ServiceX and func-ADL for performing efficient data query and access operations;
+Uproot, Awkward Array, and Vector for reading data files and transforming them into Awkward (ragged) array representations;
+Boost-histogram and hist for highly performant data transformation, and multidimensional histogramming;
+Dask extended tools (dask-awkward, dask-histogram) and Dask based analysis frameworks (Coffea) allow for scaling out distributed analysis;
+pyhf and cabinetry allow for statistical modeling and inference;
+and recast allows for analysis reinterpretation.
+ -->
 
 .kol-1-3[
 .large[
@@ -72,6 +93,15 @@ Providing the elements of a .bold[columnar analysis pipeline]
 ---
 # Composing structure of an ATLAS AGC
 
+<!--
+IRIS-HEP created the Analysis Grand Challenge (AGC) as a community benchmark and technical challenge, with the goal of having multiple community implementations of final steps of HL-LHC scale analyses.
+We can compose the PyHEP data science tools from the previous slide along with ATLAS specific tools in this cartoon to outline the structure of an ATLAS flavor AGC.
+We want to ideally start with the small calibrated PHYSLITE files for end user analysis and then use Uproot to be able to read the files into a columnar representation in Awkward Arrays.
+However, in the event that we need to use the larger PHYS file format --- which is nearly the same file format as PHYSLITE --- we can use ServiceX to read and transform ROOT files with EventLoop and perform calibrations with funcAL queries and output the same data columns as if we started with PHYSLITE.
+Once we have our columns, we can then handle systematics, do further data transformation, and histogramming before building statistical models and performing the analysis statistical inference.
+All of the compute, storage, scaling, and services are provided through an ATLAS Analysis Facility, like the University of Chicago AF or a coffea-casa instance.
+-->
+
 .kol-1-5[
 <br>
 <br>
@@ -92,6 +122,18 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 
 ---
 # Challenges: Reading all PHYSLITE files
+
+<!--
+To be able to execute a full ATLAS AGC demonstrator though, there are a series of challenges that we need to address.
+First, is being able to read all (open data) PHYSLITE files.
+As raw PHYSLITE is not easily loadable by columnar analysis tooling outside of ROOT in Analysis Release environments, we need to correctly handle things like `ElementLinks` and custom objects (e.g. triggers) with Uproot and Awkward.
+Awkward Array supports Awkward behaviors, that allow for efficiently reinterpreting data on the fly allowing for addressing these issues.
+However, to fully support the PHYSLITE schema across the Scikit-HEP and PyHEP ecosystem, ATLAS members have additionally contributed upstream to projects like Uproot and Coffea to provide ecosystem level support.
+This work continues, but it has also proven to be an opportunity for new contributors to get involved in the ecosystem, like ATLAS IRIS-HEP 2024 Fellow Sam Kelson.
+
+For the ATLAS AGC demonstrator we've also decided to use the open data PHYSLITE files from the July 2024 65 TB ATLAS open data release to make the demonstrator more widely useable and accessible.
+You've already heard Zach talk about the ATLAS open data release in today's plenary session, but also make sure to check out Giovanni's talk later today in Track 8.
+-->
 
 .kol-1-2[
 .large[
