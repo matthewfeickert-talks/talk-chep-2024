@@ -279,13 +279,13 @@ from atlascp import EgammaTools
 # Columnar CP tool backend performance tests
 
 .huge[
-* During (ongoing) refactor added preliminary integrated benchmark to measure .bold[time spent in tool per event] (not i/o) and compare to xAOD model
+* During (ongoing) refactor added preliminary integrated benchmark to measure .bold[time spent in tool per event] (not I/O) and compare to xAOD model
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
    - xAOD includes event store access
 * Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface (EDM access dependent)
-   - Time for i/o and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
+   - Time for I/O and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
 ]
 
 <!--
