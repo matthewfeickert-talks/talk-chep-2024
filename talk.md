@@ -521,7 +521,7 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 
 .large[
 * For reading `ElementLink` and other unreadable members are pursuing multiple strategies
-* Have Awkward behaviors in Python, but we also try to turn everything into POD branches, and RNTuple will help with that
+* Have Awkward behaviors in Python, but we also try to turn everything into "plain old data" (POD) branches, and RNTuple will help with that
 * If only target infrastructure was Uproot we could stick with Awkward behaviors, but RDF (without dictionaries), and Julia would also have to support such custom reading, and that's not a scalable approach
 ]
 
