@@ -116,7 +116,7 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-4-5[
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=100%>
-.center.large[Components of an ATLAS [Analysis Grand Challenge (AGC)](https://agc.readthedocs.io/)<br>demonstrator pipeline]
+.center.large[Components of an ATLAS [Analysis Grand Challenge (AGC)](https://agc.readthedocs.io/)<br>demonstrator pipeline .smaller[(c.f. [The 200Gbps Challenge](https://indico.cern.ch/event/1338689/contributions/6009824/) (Alexander Held, Monday plenary))]]
 </p>
 ]
 
