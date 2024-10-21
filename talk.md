@@ -526,6 +526,11 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 ]
 
 ---
+# Definitions
+
+* Combined Performance (CP): Tools and algorithms for reconstruction, identification, and measurement of physics objects
+
+---
 # References
 
 * [ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), ATLAS Collaboration, 2022
