@@ -283,7 +283,7 @@ from atlascp import EgammaTools
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
-   - xAOD includes event store access
+   - xAOD includes event store access (per-event overhead, paid per-batch in columnar)
 * Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface (EDM access dependent)
    - Time for I/O and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
 ]
