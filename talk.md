@@ -307,7 +307,7 @@ from atlascp import EgammaTools
 
 .large[
 * ATLAS CP tools were created 10-15 years ago to .bold[run in an analysis framework]
-   - Battle tested, extremely well understood, excellent physics performance, strong desire to be be maintained
+   - Battle tested, extremely well understood, excellent physics performance, strong desire to be maintained
    - Rewrite cost is currently too high across collaboration to move to [`correctionlib`](https://cms-nanoaod.github.io/correctionlib/) paradigm
    - Columnar .bold[cracks open "black box"] implementations of tools for the new analysis model
    - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
