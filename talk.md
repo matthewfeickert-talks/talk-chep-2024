@@ -18,7 +18,7 @@ October 21st, 2024
 # Challenges for Future Analysis
 
 <!--
-As we move towards the high luminosity lhc (HL-LHC) era we know already that there will be serval computing challenges to overcome.
+As we move towards the high luminosity LHC (HL-LHC) era we know already that there will be serval computing challenges to overcome.
 One of those is the amount of required disk for the the data that will be collected, which as seen in the figure on the left from the ATLAS software and computing HL-LHC roadmap, where even with aggressive R&D program the amount of disk needed would be between +10%/+20% per year of the sustained budget model.
 As we know that we won't be able to realistically store everything on disk, ATLAS is moving towards a strategy of "trading disk for CPU" where we move to computing on the fly information traditionally stored on disk.
 
