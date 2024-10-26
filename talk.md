@@ -17,6 +17,17 @@ October 21st, 2024
 ---
 # Challenges for Future Analysis
 
+<!--
+As we move towards the high luminosity LHC (HL-LHC) era we know already that there will be serval computing challenges to overcome.
+One of those is the amount of required disk for the the data that will be collected, which as seen in the figure on the left from the ATLAS software and computing HL-LHC roadmap, where even with aggressive R&D program the amount of disk needed would be between +10%/+20% per year of the sustained budget model.
+As we know that we won't be able to realistically store everything on disk, ATLAS is moving towards a strategy of "trading disk for CPU" where we move to computing on the fly information traditionally stored on disk.
+
+Alongside the disk use reduction plan is the PHYSLITE file format selected as the Run 4 analysis model.
+PHYSLITE is a monolithic file format that is intended to serve most Run 4 physics analsyes use cases.
+It is intended for direct use in physics analysis, with already calibrated objects allowing for people to get right to analysis, and will be able to be used directly without having to create ntuples.
+Skimming may still be desirable in some cases, but the main idea is that as a format it is ready to go for analysis.
+ -->
+
 .kol-1-2[
 <!-- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); adds a shadow that is 5px to the right and 5px down from the image, with a blur radius of 15px and a semi-transparent black color (rgba(0, 0, 0, 0.5)). -->
 <p style="text-align:center;">
@@ -38,15 +49,25 @@ October 21st, 2024
 </p>
 .caption[(Jana Schaarschmidt, [CHEP 2023](https://indico.jlab.org/event/459/contributions/11586/))]
 
-[.center.bold[PHYSLITE]](https://atlas-physlite-content.web.cern.ch/)
+[.center.bold[PHYSLITE]](https://atlas-physlite-content-opendata.web.cern.ch/)
 * Common file format for .bold[Run 4 Analysis Model]
-* Contains already-calibrated objects for fast analysis
 * Monolithic: Intended to serve ~80% of physics analysis in Run 4
+* Contains already-calibrated objects for fast analysis
 * Will be able to use directly without need for ntuples
 ]
 
 ---
 # Pythonic Ecosystem for ATLAS Analysis
+
+<!--
+An interest that ATLAS has is to be able to integrate in and take advantage of the modern set of data science tools that exist in the Scikit-HEP/PyHEP ecosystem that builds upon and extends the broader Scientific Python ecosystem.
+This involves tools like ServiceX and func-ADL for performing efficient data query and access operations;
+Uproot, Awkward Array, and Vector for reading data files and transforming them into Awkward (ragged) array representations;
+Boost-histogram and hist for highly performant data transformation, and multidimensional histogramming;
+Dask extended tools (dask-awkward, dask-histogram) and Dask based analysis frameworks (Coffea) allow for scaling out distributed analysis;
+pyhf and cabinetry allow for statistical modeling and inference;
+and recast allows for analysis reinterpretation.
+ -->
 
 .kol-1-3[
 .large[
@@ -72,6 +93,15 @@ Providing the elements of a .bold[columnar analysis pipeline]
 ---
 # Composing structure of an ATLAS AGC
 
+<!--
+IRIS-HEP created the Analysis Grand Challenge (AGC) as a community benchmark and technical challenge, with the goal of having multiple community implementations of final steps of HL-LHC scale analyses.
+We can compose the PyHEP data science tools from the previous slide along with ATLAS specific tools in this cartoon to outline the structure of an ATLAS flavor AGC.
+We want to ideally start with the small calibrated PHYSLITE files for end user analysis and then use Uproot to be able to read the files into a columnar representation in Awkward Arrays.
+However, in the event that we need to use the larger PHYS file format --- which is nearly the same file format as PHYSLITE --- we can use ServiceX to read and transform ROOT files with EventLoop and perform calibrations with funcAL queries and output the same data columns as if we started with PHYSLITE.
+Once we have our columns, we can then handle systematics, do further data transformation, and histogramming before building statistical models and performing the analysis statistical inference.
+All of the compute, storage, scaling, and services are provided through an ATLAS Analysis Facility, like the University of Chicago AF or a coffea-casa instance.
+-->
+
 .kol-1-5[
 <br>
 <br>
@@ -86,16 +116,28 @@ End user analysis ideally uses .bold[smaller and calibrated PHYSLITE]
 .kol-4-5[
 <p style="text-align:center;">
    <img src="figures/atlas-pipeline.png"; width=100%>
-.center.large[Components of an ATLAS AGC demonstrator pipeline]
+.center.large[Components of an ATLAS [Analysis Grand Challenge (AGC)](https://agc.readthedocs.io/)<br>demonstrator pipeline .smaller[(c.f. [The 200Gbps Challenge](https://indico.cern.ch/event/1338689/contributions/6009824/) (Alexander Held, Monday plenary))]]
 </p>
 ]
 
 ---
 # Challenges: Reading all PHYSLITE files
 
+<!--
+To be able to execute a full ATLAS AGC demonstrator though, there are a series of challenges that we need to address.
+First, is being able to read all (open data) PHYSLITE files.
+As raw PHYSLITE is not easily loadable by columnar analysis tooling outside of ROOT in Analysis Release environments, we need to correctly handle things like `ElementLinks` and custom objects (e.g. triggers) with Uproot and Awkward.
+Awkward Array supports Awkward behaviors, that allow for efficiently reinterpreting data on the fly allowing for addressing these issues.
+However, to fully support the PHYSLITE schema across the Scikit-HEP and PyHEP ecosystem, ATLAS members have additionally contributed upstream to projects like Uproot and Coffea to provide ecosystem level support.
+This work continues, but it has also proven to be an opportunity for new contributors to get involved in the ecosystem, like ATLAS IRIS-HEP 2024 Fellow Sam Kelson.
+
+For the ATLAS AGC demonstrator we've also decided to use the open data PHYSLITE files from the July 2024 65 TB ATLAS open data release to make the demonstrator more widely useable and accessible.
+You've already heard Zach talk about the ATLAS open data release in today's plenary session, but also make sure to check out Giovanni's talk later today in Track 8.
+-->
+
 .kol-1-2[
 .large[
-* Raw [PHYSLITE](https://atlas-physlite-content.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
+* Raw [PHYSLITE](https://atlas-physlite-content-opendata.web.cern.ch/) is not easily loadable by columnar analysis tools outside of ROOT
    - Challenges for correctly handling `ElementLinks` and custom objects .smaller[(e.g. triggers)]
 * Awkward Array supports [`behaviors`](https://awkward-array.org/doc/2.6/reference/ak.behavior.html), which allow for efficiently reinterpreting data on the fly
 * ATLAS members have contributed to open ecosystem development to support PHYSLITE in both [Uproot](https://uproot.readthedocs.io/en/stable/) and [Coffea](https://coffeateam.github.io/coffea/api/coffea.nanoevents.PHYSLITESchema.html#coffea.nanoevents.PHYSLITESchema)
@@ -237,13 +279,13 @@ from atlascp import EgammaTools
 # Columnar CP tool backend performance tests
 
 .huge[
-* During (ongoing) refactor added preliminary integrated benchmark to measure .bold[time spent in tool per event] (not i/o) and compare to xAOD model
+* During (ongoing) refactor added preliminary integrated benchmark to measure .bold[time spent in tool per event] (not I/O) and compare to xAOD model
 * While direct comparison not possible, tests are as close as possible
    - Only involves `C++` CP tool code (no Python involved)
    - Uses same version of CP tool
-   - xAOD includes event store access
-* Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface
-   - Time for i/o and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
+   - xAOD includes event store access (per-event overhead, paid per-batch in columnar)
+* Show .bold[substantial speedups] for migrated tools: .bold[columnar is 2-4x faster] than xAOD interface (EDM access dependent)
+   - Time for I/O and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark)
 ]
 
 <!--
@@ -265,10 +307,10 @@ from atlascp import EgammaTools
 
 .large[
 * ATLAS CP tools were created 10-15 years ago to .bold[run in an analysis framework]
-   - Battle tested, extremely well understood, excellent physics performance, strong desire to be be maintained
+   - Battle tested, extremely well understood, excellent physics performance, strong desire to be maintained
    - Rewrite cost is currently too high across collaboration to move to [`correctionlib`](https://cms-nanoaod.github.io/correctionlib/) paradigm
-   - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
    - Columnar .bold[cracks open "black box"] implementations of tools for the new analysis model
+   - Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration
 * Raises the question: "What would it take to get to .bold[`python -m pip install atlascp`]?"
    - Ambitious idea not as far fetched as you might think: [`pip install ROOT`](https://indico.cern.ch/event/1338689/contributions/6010410/) (Vincenzo Padulano, Monday Track 6)
 * Columnar prototype explores these possibilities
@@ -287,7 +329,7 @@ from atlascp import EgammaTools
 * Tooling ecosystem is proving .bold[approachable and performant] for Pythonic columnar analysis of PHYSLITE
 * Enabling mentored university students to implement versions of the AGC by themselves in a Jupyter notebook
 * ATLAS IRIS-HEP Fellow Denys Klekots's [AGC project using .bold[ATLAS open data]](https://indico.cern.ch/event/1455396/contributions/6126406/) ([implementation on GitHub](https://github.com/iris-hep/agc-physlite))
-* Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2025+2016 Run 2 Monte Carlo from the 2024 .bold[ATLAS open data] release
+* Simplified version of [IRIS-HEP AGC top reconstruction challenge](https://agc.readthedocs.io/) using 2015+2016 Run 2 Monte Carlo from the 2024 .bold[ATLAS open data] release
 ]
 ]
 .kol-1-2[
@@ -475,12 +517,22 @@ HL-LHC era data scale requires rethinking interacting with data during analysis
 ]
 
 ---
+# Reading PHYSLITE with Columnar Backends
+
+.large[
+* For reading `ElementLink` and other unreadable members are pursuing multiple strategies
+* Have Awkward behaviors in Python, but we also try to turn everything into "plain old data" (POD) branches, and RNTuple will help with that
+* If only target infrastructure was Uproot we could stick with Awkward behaviors, but RDF (without dictionaries), and Julia would also have to support such custom reading, and that's not a scalable approach
+]
+
+---
 # References
 
 * [ATLAS Software and Computing HL-LHC Roadmap](https://cds.cern.ch/record/2802918), ATLAS Collaboration, 2022
-* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024
+* [Documentation on PHYSLITE Variables for ATLAS Open Data](https://atlas-physlite-content-opendata.web.cern.ch/), ATLAS Collaboration, Accessed 2024
 * [Using Legacy ATLAS C++ Calibration Tools in Modern Columnar Analysis Environments](https://indico.cern.ch/event/1330797/contributions/5796636/), Matthias Vigl, [ACAT 2024](https://indico.cern.ch/event/1330797/)
 * [How the Scientific Python ecosystem helps answering fundamental questions of the Universe](https://cfp.scipy.org/2024/talk/KCXVVR/), Vangelis Kourlitis, Matthew Feickert, and Gordon Watts, [SciPy 2024](https://www.scipy2024.scipy.org/)
+* [ATLAS PHYSLITE Content Documentation](https://atlas-physlite-content.web.cern.ch/), ATLAS Collaboration, Accessed 2024 [ATLAS Internal]
 * [The Columnar Analysis Grand Challenge Demonstrator](https://indico.cern.ch/event/1268248/contributions/5326293/), Gordon Watts, [ATLAS S&C Plenary Afternoon: Demonstrators](https://indico.cern.ch/event/1268248/), 2023-10-04 [ATLAS Internal]
 * [ATLAS AGC Demonstrator](https://indico.cern.ch/event/1328739/contributions/5605607/), Gordon Watts, [ATLAS AMG+ADC Joint Session](https://indico.cern.ch/event/1328739/), 2023-03-30 [ATLAS Internal]
 * [Tour of the CP Columnar Prototype and CP Algorithm Conversion](https://indico.cern.ch/event/1463263/contributions/6161076/), Nils Krumnack, 2024-10-07 [ATLAS Internal]
